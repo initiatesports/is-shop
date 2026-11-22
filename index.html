@@ -1113,5 +1113,22 @@ document.querySelectorAll('dialog').forEach(d => {
 })();
 </script>
 
+<style>
+.scroll-cue{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);z-index:55;display:flex;flex-direction:column;align-items:center;gap:6px;border:0;background:transparent;cursor:pointer;color:#13213D;font:600 13px var(--body);letter-spacing:.12em;transition:opacity .35s,transform .35s}
+.scroll-cue .ring{width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,.92);border:1px solid #D5E4E7;box-shadow:0 10px 26px rgba(19,33,61,.16);display:grid;place-items:center;animation:cueBob 1.8s ease-in-out infinite}
+.scroll-cue .ring svg{width:20px;height:20px;color:#0E7F93}
+.scroll-cue span{background:rgba(255,255,255,.85);border-radius:999px;padding:3px 10px}
+.scroll-cue.hide{opacity:0;pointer-events:none;transform:translate(-50%,10px)}
+@keyframes cueBob{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
+@media (prefers-reduced-motion:reduce){.scroll-cue .ring{animation:none}}
+</style>
+<button type="button" class="scroll-cue" id="scrollCue" aria-label="向下瀏覽更多產品"><span>向下瀏覽</span><div class="ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></div></button>
+<script>
+(function(){var c=document.getElementById('scrollCue');if(!c)return;
+function upd(){var y=window.scrollY||document.documentElement.scrollTop,h=document.documentElement.scrollHeight-window.innerHeight;c.classList.toggle('hide',y>240||h-y<200||document.querySelector('dialog[open]')!==null)}
+window.addEventListener('scroll',upd,{passive:true});window.addEventListener('resize',upd);setInterval(upd,800);upd();
+c.addEventListener('click',function(){var t=document.getElementById('sets')||document.querySelector('main section:nth-of-type(2)');if(t)t.scrollIntoView({behavior:'smooth',block:'start'});else window.scrollBy({top:window.innerHeight*0.8,behavior:'smooth'})});})();
+</script>
+
 </body>
 </html>
