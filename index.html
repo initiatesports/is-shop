@@ -1130,5 +1130,48 @@ window.addEventListener('scroll',upd,{passive:true});window.addEventListener('re
 c.addEventListener('click',function(){var t=document.getElementById('sets')||document.querySelector('main section:nth-of-type(2)');if(t)t.scrollIntoView({behavior:'smooth',block:'start'});else window.scrollBy({top:window.innerHeight*0.8,behavior:'smooth'})});})();
 </script>
 
+<style>
+.sizes label.so span{color:#9AA8B3;background:repeating-linear-gradient(135deg,#F3F6F7 0 6px,#E9EEF0 6px 12px);border-style:dashed;cursor:not-allowed;text-decoration:line-through}
+.sizes label.so span::after{content:'售罄';margin-left:6px;font:600 11px var(--body);color:#B0475A;text-decoration:none;display:inline-block}
+.sizes label.so span:hover{border-color:var(--line)}
+.tile.so .tile-img::after{content:'已售罄';position:absolute;inset:auto 12px 12px auto;background:#13213D;color:#fff;font:700 13px var(--body);letter-spacing:.08em;padding:6px 12px;border-radius:999px}
+.tile.so .tile-img img{filter:grayscale(.55) opacity(.75)}
+#addBtn[disabled]{opacity:.5;cursor:not-allowed}
+</style>
+<script>
+/* 售罄顯示：教練於網店教練端「售罄設定」切換，網店讀取 ?action=soldout */
+(function () {
+  var SOLD = {};
+  function isSold(id, s) { return !!SOLD[id + '|' + s]; }
+  function allSold(p) { return p.sizes.every(function (s) { return isSold(p.id, s); }); }
+  function markTiles() {
+    document.querySelectorAll('.tile').forEach(function (b) {
+      var name = (b.querySelector('.tile-name') || {}).textContent;
+      var p = PRODUCTS.find(function (x) { return x.name_zh === name; });
+      if (p) b.classList.toggle('so', allSold(p));
+    });
+  }
+  function markSizes() {
+    if (typeof cur === 'undefined' || !cur) return;
+    var any = false;
+    document.querySelectorAll('#pdSizes label').forEach(function (l) {
+      var i = l.querySelector('input'); var so = isSold(cur.id, i.value);
+      l.classList.toggle('so', so); i.disabled = so; if (so) i.checked = false; else any = true;
+    });
+    var btn = document.getElementById('addBtn');
+    btn.disabled = !any; btn.textContent = any ? '加入購物車' : '已售罄';
+  }
+  new MutationObserver(markSizes).observe(document.getElementById('pdSizes'), { childList: true });
+  fetch(API + '?action=soldout').then(function (r) { return r.json(); }).then(function (d) {
+    if (!d || !d.ok || !Array.isArray(d.soldout)) return;
+    SOLD = {}; d.soldout.forEach(function (x) { SOLD[x.id + '|' + x.size] = 1; });
+    markTiles(); markSizes();
+    var before = cart.length;
+    cart = cart.filter(function (c) { return !isSold(c.id, c.size); });
+    if (cart.length !== before) saveCart();
+  }).catch(function () {});
+})();
+</script>
+
 </body>
 </html>
