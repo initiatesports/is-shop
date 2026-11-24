@@ -687,6 +687,10 @@ PRODUCTS.filter(p => p.category === 'socks').forEach(p => $('#gridSocks').append
 PRODUCTS.filter(p => p.category === 'gear').forEach(p => $('#gridGear').appendChild(tile(p)));
 document.querySelectorAll('[data-goto]').forEach(b => b.addEventListener('click', () => document.getElementById(b.dataset.goto).scrollIntoView()));
 document.querySelectorAll('[data-open]').forEach(b => b.addEventListener('click', () => openProduct(b.dataset.open)));
+/* 深層連結：?p=<商品 id> 直接開啟該商品（家長 App「網店」分頁使用）；?sec=gear|socks|kit 捲至該系列 */
+(function () { try { const q = new URLSearchParams(location.search), pid = q.get('p'), sec = { gear: 'gridGear', socks: 'gridSocks', kit: 'gridKit' }[q.get('sec') || ''];
+  if (pid && PRODUCTS.some(p => p.id === pid)) setTimeout(() => openProduct(pid), 60);
+  else if (sec && document.getElementById(sec)) setTimeout(() => document.getElementById(sec).scrollIntoView(), 60); } catch (e) {} })();
 
 let cur = null, qty = 1;
 function openProduct(id) {
