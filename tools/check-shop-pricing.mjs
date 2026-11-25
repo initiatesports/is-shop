@@ -20,7 +20,7 @@ vm.runInContext(`const PRODUCTS = ${prodLine}; let cart = [];\n${pricing}\nthis.
 const F = fe.api;
 const feTotal = (ov, items, now) => { F.shopApplyPricing(ov, now.getTime()); return F.totals(items.map(i => ({ id: i.sku, size: i.size, qty: i.qty }))).grand; };
 
-/* ── 後端計價：舊版快照＋修補檔，模擬 UrlFetchApp／CacheService ── */
+/* ── 後端計價：現行後端計價（第 9 版）＋修補檔，模擬 UrlFetchApp／CacheService ── */
 let homeResp = null, fetches = 0, cacheStore = {};
 const be = vm.createContext({ JSON, Date, Math, Object, Array, String, Number, isFinite, Logger: { log() {} },
   UrlFetchApp: { fetch() { fetches++; if (homeResp === 'down') throw Error('down'); return { getResponseCode: () => 200, getContentText: () => JSON.stringify(homeResp) }; } },
@@ -36,6 +36,7 @@ const SCEN = {
   'coach changed prices + earlier early-bird end': shopRow({ v: 1, earlyUntil: '2026-11-28', products: prods({ 'winter-ls-top': { price_hkd: 110, price_early: 110, price_regular: 150 }, 'winter-jacket': { price_early: 210, price_regular: 250 }, 'jogger-pants': { price_hkd: 170 }, 'hoodie-2023': { price_hkd: 189 }, 'socks-1': { price_hkd: 45, price_early: 30, price_regular: 45 } }) }),
   'early-bird removed (blank date)': shopRow({ v: 1, earlyUntil: '', products: prods({ 'winter-ls-top': { price_early: 110, price_regular: 150 }, 'hoodie-2023': { price_hkd: 215 } }) }),
   'invalid values ignored (fallback per item)': shopRow({ v: 1, earlyUntil: '2026-02-31', products: prods({ 'winter-ls-top': { price_early: 0, price_regular: 140.5 }, 'winter-jacket': { price_early: 260, price_regular: 230 }, 'jogger-pants': { price_hkd: '150' }, 'hoodie-2023': { price_hkd: 99999 } }) }),
+  'gear and bag prices changed': shopRow({ v: 1, earlyUntil: '2026-12-01', products: prods({}).concat([{ id: 'gear-speedrope', category: 'gear', name_zh: 'x', price_hkd: 85 }, { id: 'gear-canvasbag', category: 'gear', name_zh: 'x', price_hkd: 25 }, { id: 'gear-pickleset', category: 'gear', name_zh: 'x', price_early: 99, price_regular: 130 }]) }),
   'malformed app_shop': { settings: [{ key: 'app_shop', value: '{bad json' }] },
   'wrong version': shopRow({ v: 2, products: prods({ 'winter-ls-top': { price_hkd: 1 } }) })
 };
@@ -47,7 +48,9 @@ const CARTS = [
   [it('winter-ls-top', 1)], [it('jogger-pants', 2), it('winter-ls-top', 1)],
   [it('hoodie-2023', 1)], [it('hoodie-2023', 3)],
   [it('socks-1', 1)], [it('socks-1', 2), it('socks-2', 2)], [it('socks-3', 7)],
-  [it('winter-ls-top', 3), it('winter-jacket', 2), it('jogger-pants', 2), it('hoodie-2023', 2), it('socks-1', 4), it('socks-4', 1)]
+  [it('winter-ls-top', 3), it('winter-jacket', 2), it('jogger-pants', 2), it('hoodie-2023', 2), it('socks-1', 4), it('socks-4', 1)],
+  [it('gear-speedrope', 2, '白柄・白芯'), it('gear-beadrope', 1, '紫×白')], [it('gear-canvasbag', 4, '米白')], [it('gear-canvasbag', 1, '深藍'), it('gear-pickleset', 1, '標準'), it('gear-wirecord', 3, '標準')],
+  [it('winter-jacket', 1), it('gear-wirerope', 1, '粉紅'), it('gear-canvasbag', 3, '米白'), it('socks-2', 3)]
 ];
 const TIMES = ['2026-11-25T12:00:00+08:00', '2026-11-28T23:59:59+08:00', '2026-11-29T00:00:00+08:00', '2026-12-01T23:59:59+08:00', '2026-12-02T00:00:01+08:00'].map(t => new Date(t));
 let n = 0;
