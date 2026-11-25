@@ -1,0 +1,1198 @@
+<!doctype html>
+<html lang="zh-Hant-HK">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="googlebot" content="noindex, nofollow">
+<title>INITIATE SPORTS 官方網店（預覽版）</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Noto+Sans+HK:wght@400;500;700;900&display=swap">
+<style>
+:root{
+  color-scheme: light;
+  --bg:#F4F8F8; --surface:#FFFFFF; --panel:#E9F2F3; --panel-2:#DCECEF;
+  --ink:#0D1B2C; --muted:#4A5D6E; --line:#D5E4E7; --hair:#E3EDEF;
+  --navy:#13213D; --teal:#3DB8D0; --teal-deep:#0E7F93; --teal-ink:#0B6475; --aqua:#BFE8EF;
+  --focus:#0E7F93;
+  --display:'Barlow Condensed','Noto Sans HK',system-ui,sans-serif;
+  --body:'Noto Sans HK',system-ui,-apple-system,'PingFang HK','Microsoft JhengHei',sans-serif;
+  --wrap:1200px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-padding-top:84px;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+button{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+.eyebrow{font-family:var(--display);font-weight:600;font-size:14px;letter-spacing:.22em;text-transform:uppercase;color:var(--teal-deep);margin:0}
+
+/* top strip + header */
+.strip{background:var(--navy);color:#DDF3F7;font-size:13px;text-align:center;padding:8px 16px;letter-spacing:.04em}
+.strip b{color:#fff;font-weight:700}
+.bar{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.92);backdrop-filter:saturate(1.4) blur(10px);-webkit-backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--hair)}
+.bar-in{max-width:var(--wrap);margin:0 auto;padding:10px 24px;display:flex;align-items:center;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;margin-right:auto}
+.brand-logo{height:46px;width:auto}
+.brand span{font-family:var(--display);font-weight:700;font-size:21px;letter-spacing:.08em}
+.nav{display:flex;gap:2px}
+.nav a{text-decoration:none;padding:10px 14px;border-radius:999px;font-size:15px;font-weight:500;color:var(--ink)}
+.nav a:hover{background:var(--panel)}
+.cart-btn{display:flex;align-items:center;gap:10px;background:var(--ink);color:#fff;border:0;border-radius:999px;padding:10px 18px;font-weight:700;cursor:pointer;min-height:44px}
+.cart-btn:hover{background:#1d3150}
+.cart-btn .count{background:var(--teal);color:#06212A;border-radius:999px;min-width:24px;height:24px;display:inline-grid;place-items:center;font-size:13px;padding:0 7px}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:
+  radial-gradient(120% 90% at 85% 40%,#CFEFF4 0%,rgba(207,239,244,0) 60%),
+  linear-gradient(180deg,#FFFFFF 0%,var(--bg) 100%)}
+.hero-in{max-width:var(--wrap);margin:0 auto;padding:72px 24px 56px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:32px;align-items:center}
+.hero h1{font-weight:900;font-size:clamp(32px,4.4vw,56px);line-height:1.08;margin:14px 0 18px;letter-spacing:.01em}
+.hero h1 em{font-style:normal;color:var(--teal-deep);white-space:nowrap}
+.hero .sub{margin:0 0 30px;max-width:30em;color:var(--muted);font-size:17px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 26px;border-radius:999px;font-weight:700;text-decoration:none;border:1.5px solid transparent;cursor:pointer;background:transparent;transition:transform .15s ease,background .15s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary,.btn-navy{background:var(--ink);color:#fff}
+.btn-primary:hover,.btn-navy:hover{background:#1d3150}
+.btn-ghost{border-color:var(--ink);color:var(--ink)}
+.btn-ghost:hover{background:var(--surface)}
+.btn-navy:disabled{opacity:.45;cursor:not-allowed;transform:none}
+.hero-meta{display:flex;gap:28px;margin-top:40px;padding-top:24px;border-top:1px solid var(--line);flex-wrap:wrap}
+.hero-meta div{display:flex;flex-direction:column}
+.hero-meta strong{font-family:var(--display);font-size:30px;font-weight:700;line-height:1}
+.hero-meta span{font-size:13px;color:var(--muted);margin-top:6px}
+.hero-art{position:relative;aspect-ratio:1/0.92}
+.hero-art::before{content:"";position:absolute;inset:6% 4% 2% 10%;border-radius:50%;background:radial-gradient(circle at 40% 35%,#E6F7FA 0%,#BFE8EF 60%,#9FDCE7 100%)}
+.hero-art::after{content:"";position:absolute;left:4%;right:0;top:58%;height:14px;background:var(--teal);transform:rotate(-12deg);opacity:.9;border-radius:2px;box-shadow:0 22px 0 -4px #fff}
+.hero-art img{position:absolute;z-index:1}
+.hero-art .a{width:50%;left:2%;bottom:6%;z-index:2}
+.hero-art .b{width:52%;left:30%;top:2%}
+.hero-art .c{width:42%;right:-2%;bottom:2%;z-index:3}
+
+/* trust row */
+.trust{border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);background:var(--surface)}
+.trust ul{max-width:var(--wrap);margin:0 auto;padding:18px 24px;list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.trust li{display:flex;gap:12px;align-items:center;font-size:14px;color:var(--muted)}
+.trust b{display:block;color:var(--ink);font-size:15px}
+.ico{flex:none;width:40px;height:40px;border-radius:12px;background:var(--panel);display:grid;place-items:center;color:var(--teal-deep)}
+.ico svg{width:22px;height:22px}
+
+/* sections */
+.sec{max-width:var(--wrap);margin:0 auto;padding:88px 24px 8px}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:32px;flex-wrap:wrap}
+.sec-head h2{font-size:clamp(28px,3.6vw,42px);font-weight:900;line-height:1.15;margin:8px 0 0}
+.sec-head p{margin:0;max-width:34em;color:var(--muted)}
+
+/* bundles */
+.bundles{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:18px}
+.bundle{all:unset;box-sizing:border-box;cursor:pointer;position:relative;display:flex;flex-direction:column;justify-content:space-between;gap:18px;border-radius:22px;padding:26px;background:var(--surface);border:1px solid var(--line);overflow:hidden;transition:transform .2s ease,box-shadow .2s ease}
+.bundle:hover{transform:translateY(-3px);box-shadow:0 18px 40px -22px rgba(13,27,44,.35)}
+.bundle:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.bundle.hero-b{background:linear-gradient(150deg,#E6F7FA 0%,#C6ECF2 100%);color:var(--ink);border-color:#A9DFE8}
+.bundle .tag{align-self:flex-start;font-size:12px;font-weight:700;letter-spacing:.06em;padding:4px 10px;border-radius:999px;background:var(--panel);color:var(--teal-ink)}
+.bundle.hero-b .tag{background:var(--teal);color:#06212A}
+.bundle h3{margin:10px 0 2px;font-size:22px;line-height:1.3}
+.bundle .items{font-size:14px;color:var(--muted)}
+.bundle.hero-b .items{color:var(--muted)}
+.bundle .imgs{display:flex;align-items:flex-end;justify-content:center;height:150px;margin:6px 0}
+.bundle .imgs img{height:100%;width:auto;max-width:38%;object-fit:contain;margin:0 -10px}
+.bundle.hero-b .imgs{height:190px}
+.bundle .row{display:flex;align-items:baseline;justify-content:space-between;gap:10px;border-top:1px solid var(--line);padding-top:14px}
+.bundle.hero-b .row{border-color:#A9DFE8}
+.bundle .now{font-family:var(--display);font-weight:700;font-size:34px;line-height:1}
+.bundle .row>span:last-child{display:flex;flex-direction:column;align-items:flex-end;line-height:1.35;text-align:right}
+.bundle .was{font-size:13px;color:var(--muted)}
+.bundle.hero-b .was{color:var(--muted)}
+.bundle .save{font-weight:700;color:var(--teal-deep);font-size:14px}
+.bundle.hero-b .save{color:var(--teal-deep)}
+
+/* product grid */
+.grid{display:grid;gap:20px;grid-template-columns:repeat(3,minmax(0,1fr))}
+.grid.socks{grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.tile-img{position:relative}.badge-new{position:absolute;left:12px;top:12px;z-index:1;font-family:var(--display);font-weight:700;font-size:12px;letter-spacing:.14em;background:var(--ink);color:#fff;border-radius:999px;padding:3px 10px}
+.tile{all:unset;box-sizing:border-box;display:flex;flex-direction:column;cursor:pointer;border-radius:20px;background:var(--surface);overflow:hidden;border:1px solid var(--hair);transition:box-shadow .2s ease,transform .2s ease}
+.tile:hover{box-shadow:0 20px 44px -26px rgba(13,27,44,.4);transform:translateY(-2px)}
+.tile:hover .tile-img img{transform:scale(1.035)}
+.tile:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.tile-img{background:radial-gradient(90% 80% at 50% 40%,#FFFFFF 0%,var(--panel) 100%);aspect-ratio:1/1.05;padding:26px;overflow:hidden}
+.socks .tile-img{aspect-ratio:3/4;padding:18px 16px}
+.tile-img img{width:100%;height:100%;object-fit:contain;transition:transform .35s ease}
+.tile-body{padding:18px 20px 20px;display:flex;flex-direction:column;gap:4px;flex:1}
+.tile-name{font-weight:700;font-size:17px;line-height:1.35}
+.tile-sum{color:var(--muted);font-size:14px}
+.swatches{display:flex;gap:6px;margin-top:8px}
+.sw{width:14px;height:14px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(13,27,44,.18)}
+.tile-foot{margin-top:auto;padding-top:12px;display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.price{font-family:var(--display);font-weight:700;font-size:24px;letter-spacing:.01em;line-height:1}
+.price small{font-family:var(--body);font-size:13px;font-weight:500;color:var(--muted);margin-left:2px}
+.price.tbd{font-family:var(--body);font-size:14px;font-weight:500;color:var(--teal-ink)}
+.promo{font-size:12px;font-weight:700;color:var(--teal-ink);background:var(--panel);border-radius:999px;padding:4px 10px}
+
+/* hoodie feature */
+.feature{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);border-radius:28px;overflow:hidden;background:#EDEAE3}
+.feature-art{position:relative;min-height:520px;background:radial-gradient(80% 70% at 45% 45%,#F7F5F0 0%,#E4DFD5 100%);display:grid;place-items:center;padding:40px}
+.feature-art img.main{width:min(86%,460px)}
+.feature-art .stamp{position:absolute;left:24px;top:24px;font-family:var(--display);font-weight:700;letter-spacing:.2em;font-size:13px;color:#1F4A3A;border:1.5px solid #1F4A3A;border-radius:999px;padding:6px 14px}
+.feature-copy{padding:56px 48px;display:flex;flex-direction:column;gap:18px;justify-content:center;background:#1F4A3A;color:#F1EEE6}
+.feature-copy .eyebrow{color:#B9D6C8}
+.feature-copy h2{margin:0;font-size:clamp(30px,3.8vw,46px);font-weight:900;line-height:1.12}
+.feature-copy p{margin:0;color:#D7E2DA}
+.feature-copy .pricebox{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.feature-copy .price{font-size:44px}
+.feature-copy .deal{font-weight:700;background:#F1EEE6;color:#1F4A3A;border-radius:999px;padding:6px 14px;font-size:14px}
+.feature-copy .btn-primary{background:#F1EEE6;color:#1F4A3A;align-self:flex-start}
+.feature-copy .btn-primary:hover{background:#fff}
+.thumbs{display:flex;gap:10px}
+.thumbs button{all:unset;cursor:pointer;width:72px;height:72px;border-radius:14px;overflow:hidden;box-shadow:0 0 0 1px rgba(241,238,230,.3)}
+.thumbs button:focus-visible{outline:3px solid #F1EEE6;outline-offset:2px}
+.thumbs img{width:100%;height:100%;object-fit:cover}
+
+/* sock packs */
+.packs{display:flex;gap:10px;flex-wrap:wrap}
+.pack{display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:104px;padding:10px 16px;border-radius:16px;background:var(--surface);border:1px solid var(--line)}
+.pack strong{font-family:var(--display);font-size:26px;line-height:1}
+.pack span{font-size:12px;color:var(--muted);margin-top:4px}
+.pack.best{background:var(--ink);color:#fff;border-color:var(--ink)}
+.pack.best span{color:#BFD3E2}
+
+/* how to buy */
+.how{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;counter-reset:s}
+.how li{list-style:none;background:var(--surface);border:1px solid var(--hair);border-radius:20px;padding:26px}
+.how li::before{counter-increment:s;content:"0" counter(s);font-family:var(--display);font-weight:700;font-size:40px;color:var(--teal);line-height:1;display:block;margin-bottom:12px}
+.how b{display:block;font-size:18px;margin-bottom:4px}
+.how p{margin:0;color:var(--muted);font-size:15px}
+ol.how{margin:0;padding:0}
+
+footer{margin-top:96px;background:var(--navy);color:#C9D7E3}
+.foot{max-width:var(--wrap);margin:0 auto;padding:44px 24px;display:flex;gap:24px;flex-wrap:wrap;justify-content:space-between;align-items:center;font-size:14px}
+.foot .tagline{font-family:var(--display);font-weight:700;letter-spacing:.18em;font-size:18px;color:#fff}
+.foot a{color:#fff}
+
+/* dialogs */
+dialog{border:0;padding:0;background:var(--surface);color:var(--ink);border-radius:24px;width:min(980px,calc(100vw - 24px));max-height:calc(100vh - 24px);box-shadow:0 40px 80px -30px rgba(6,12,24,.5)}
+dialog::backdrop{background:rgba(13,27,44,.5);backdrop-filter:blur(3px)}
+.dlg-head{display:flex;justify-content:space-between;align-items:center;padding:14px 20px;border-bottom:1px solid var(--hair);position:sticky;top:0;background:var(--surface);z-index:1}
+.dlg-head h2{margin:0;font-size:15px;font-weight:700;letter-spacing:.06em;color:var(--muted)}
+.x{background:var(--panel);border:0;border-radius:999px;width:44px;height:44px;cursor:pointer;font-size:22px;line-height:1}
+.pd{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr)}
+.pd-media{background:radial-gradient(90% 80% at 50% 40%,#FFFFFF 0%,var(--panel) 100%);padding:28px;display:flex;flex-direction:column;gap:16px;align-items:center}
+.pd-media .main{height:min(54vh,460px);width:100%;overflow:hidden;display:grid;place-items:center}
+.pd-media .main img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;min-height:0;border-radius:12px}
+.views{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+.views button{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:8px 16px;min-height:44px;cursor:pointer;font-size:14px}
+.views button[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.pd-info{padding:30px 28px;display:flex;flex-direction:column;gap:14px}
+.pd-info h3{margin:0;font-size:28px;font-weight:900;line-height:1.2}
+.pd-info .en{color:var(--muted);font-family:var(--display);letter-spacing:.12em;text-transform:uppercase;font-size:14px;margin-top:-8px}
+.pd-info .price{font-size:28px}
+.pd-info p{margin:0;color:var(--muted)}
+.spec{margin:0;padding:14px 0;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;font-size:14px;color:var(--ink);border-top:1px solid var(--hair);border-bottom:1px solid var(--hair)}
+.spec li::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--teal);margin:0 8px 2px 0}
+fieldset{border:0;margin:0;padding:0}
+legend{font-weight:700;margin-bottom:8px}
+.legend-row{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:6px}
+.legend-row span{font-weight:700}
+.linkish{background:none;border:0;color:var(--teal-ink);text-decoration:underline;cursor:pointer;padding:8px 0;min-height:44px}
+.sizes{display:flex;flex-wrap:wrap;gap:8px}
+.sizes label{position:relative}
+.sizes input{position:absolute;opacity:0;inset:0}
+.sizes span{display:grid;place-items:center;min-width:54px;min-height:46px;padding:0 12px;border:1px solid var(--line);border-radius:12px;cursor:pointer;font-family:var(--display);font-weight:700;font-size:17px;background:var(--surface)}
+.sizes span:hover{border-color:var(--ink)}
+.sizes input:checked + span{background:var(--ink);color:#fff;border-color:var(--ink)}
+.sizes input:focus-visible + span{outline:3px solid var(--focus);outline-offset:2px}
+.qty{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:var(--surface)}
+.qty button{width:44px;height:44px;border:0;background:transparent;cursor:pointer;font-size:20px}
+.qty button:hover{background:var(--panel)}
+.qty output{min-width:36px;text-align:center;font-weight:700}
+.add-row{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.add-row .btn{flex:1;min-width:180px}
+.hint{font-size:14px;color:var(--muted);min-height:1.6em;margin:0}
+
+.tabs{display:flex;gap:6px;padding:14px 20px 0;flex-wrap:wrap}
+.tabs button{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:8px 16px;min-height:44px;cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.sg{padding:14px 20px 24px}
+.sg .warn{background:var(--panel);border-radius:12px;padding:10px 14px;font-size:14px;color:var(--muted);margin:0 0 12px}
+.table-box{overflow-x:auto;border:1px solid var(--line);border-radius:14px}
+table{border-collapse:collapse;width:100%;font-size:14px;min-width:560px}
+th,td{padding:11px 12px;text-align:center;border-bottom:1px solid var(--hair);white-space:nowrap}
+th{background:var(--panel);font-weight:700}
+td:first-child,th:first-child{font-family:var(--display);font-weight:700;font-size:16px}
+tr:last-child td{border-bottom:0}
+
+dialog.drawer{margin:0 0 0 auto;height:100vh;max-height:100vh;width:min(460px,100vw);border-radius:0;display:none;flex-direction:column}
+dialog.drawer[open]{display:flex}
+.cart-list{list-style:none;margin:0;padding:8px 20px;flex:1;overflow:auto}
+.cart-item{display:grid;grid-template-columns:76px minmax(0,1fr) auto;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid var(--hair)}
+.cart-item img{width:76px;height:76px;object-fit:contain;background:var(--panel);border-radius:14px;padding:6px}
+.cart-item .nm{font-weight:700;font-size:15px;line-height:1.35}
+.cart-item .meta{font-size:13px;color:var(--muted)}
+.rm{background:none;border:0;color:var(--muted);text-decoration:underline;cursor:pointer;min-height:44px;padding:0 4px}
+.cart-foot{padding:16px 20px calc(16px + env(safe-area-inset-bottom,0px));border-top:1px solid var(--hair);display:flex;flex-direction:column;gap:10px;background:var(--surface)}
+.empty{padding:48px 18px;color:var(--muted);text-align:center}
+.totals{display:grid;gap:4px;font-size:15px}
+.totals div{display:flex;justify-content:space-between;gap:12px}
+.totals .grand{font-weight:700;font-size:18px;border-top:1px solid var(--hair);padding-top:8px;margin-top:4px}
+.steps{display:flex;gap:6px;margin:0;font-size:13px;color:var(--muted);flex-wrap:wrap}
+.steps span{padding:4px 10px;border-radius:999px;background:var(--panel)}
+.steps span[aria-current]{background:var(--ink);color:#fff;font-weight:700}
+.err{color:#B3261E}
+.row2{flex-direction:row}
+.row2 .btn{flex:1}
+.btn-line{border-color:var(--line);color:var(--ink);background:var(--surface)}
+.summary{background:var(--panel);border-radius:14px;padding:12px 14px;display:grid;gap:4px;font-size:14px}
+.summary div{display:flex;justify-content:space-between;gap:12px}
+.summary .grand{font-weight:700;font-size:16px;border-top:1px solid var(--line);padding-top:6px;margin-top:4px}
+.paybox{display:flex;flex-direction:column;gap:10px;border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+.paybox[hidden]{display:none}
+.copyrow{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.copyrow.big strong{font-family:var(--display);font-size:28px;letter-spacing:.04em}
+.btn-copy{border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:6px 14px;min-height:40px;cursor:pointer;font-weight:700}
+#shotPreview{max-height:160px;width:auto;border-radius:8px;border:1px solid var(--line);align-self:flex-start}
+.view{display:flex;flex-direction:column;flex:1;min-height:0}
+.view[hidden]{display:none}
+.co{padding:16px 20px;display:flex;flex-direction:column;gap:14px;overflow:auto;flex:1}
+.fld{display:flex;flex-direction:column;gap:6px;font-weight:700;font-size:14px}
+.fld input,.fld textarea{font:inherit;font-weight:400;font-size:16px;padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:var(--surface);color:var(--ink);min-height:46px}
+.fld input[aria-invalid="true"]{border-color:#C62828}
+.opt{display:flex;align-items:center;gap:10px;font-weight:400;font-size:15px;padding:10px 12px;border:1px solid var(--line);border-radius:12px;min-height:46px}
+.opt input{width:18px;height:18px;accent-color:var(--ink)}
+
+@media (max-width:980px){
+  .bundles{grid-template-columns:1fr 1fr}
+  .bundle.hero-b{grid-column:1/-1}
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .grid.socks{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .feature{grid-template-columns:1fr}
+  .feature-art{min-height:380px}
+  .nav{display:none}
+}
+@media (max-width:760px){
+  .wrap,.sec,.hero-in,.bar-in,.trust ul,.foot{padding-left:16px;padding-right:16px}
+  .hero-in{grid-template-columns:1fr;padding-top:40px;padding-bottom:32px;gap:12px}
+  .hero-art{max-width:340px;width:80%;margin:4px auto 0}
+  .trust ul{grid-template-columns:1fr;gap:12px}
+  .sec{padding-top:64px}
+  .bundles{grid-template-columns:1fr}
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  .tile-img{padding:14px}
+  .tile-body{padding:12px 14px 14px}
+  .tile-name{font-size:15px}
+  .tile-sum{display:none}
+  .price{font-size:21px}
+  .tile .promo,.tile .price small{display:none}
+  .tile .price s{display:block;margin:6px 0 0}
+  .tile .price .eb{display:block;width:max-content;margin:0 0 6px}
+  .feature-copy{padding:36px 24px}
+  .how{grid-template-columns:1fr}
+  .pd{grid-template-columns:1fr}
+  .pd-media .main{height:300px}
+  .pd-info{padding:22px 18px}
+  .brand span{display:none}
+}
+.price .eb{display:inline-block;vertical-align:middle;font-family:var(--body);font-size:11px;font-weight:700;letter-spacing:.04em;background:var(--teal);color:#06212A;border-radius:6px;padding:2px 7px;margin-right:6px}
+.price s{font-family:var(--body);font-size:13px;font-weight:500;color:var(--muted);margin-left:8px}
+.pd-promo{font-family:var(--body);font-size:14px;font-weight:500;color:var(--teal-ink);margin-top:8px;letter-spacing:0}
+.strip [data-early]{display:inline}
+.strip{position:sticky;top:0;z-index:7;padding:0;overflow:hidden;background:linear-gradient(90deg,#0E7F93,#13213D 30%,#13213D 70%,#0E7F93)}
+.strip.static{padding:8px 16px}
+.bar{top:var(--strip-h,38px)}
+html{scroll-padding-top:calc(var(--strip-h,38px) + 84px)}
+.mq{overflow:hidden;white-space:nowrap;padding:9px 0}
+.mq-track{display:inline-flex;animation:mq 32s linear infinite}
+.strip:hover .mq-track{animation-play-state:paused}
+.mq-run{display:inline-flex;align-items:center;flex:none}
+.mq-item{display:inline-flex;align-items:center;gap:8px;padding:0 18px;font-size:14px;color:#DDF3F7}
+.mq-item b{color:#fff}
+.mq-item .after{color:#9FB6C8;font-size:12px}
+.strip.paused .mq-track{animation-play-state:paused}
+.strip{display:flex;align-items:center}
+.strip .mq{flex:1;min-width:0}
+.mq-toggle{order:2;flex:none;width:36px;height:30px;margin:0 6px;border:0;border-radius:8px;background:rgba(255,255,255,.12);color:#fff;font-size:12px;cursor:pointer}
+.mq-toggle:hover{background:rgba(255,255,255,.22)}
+.price .after{font-family:var(--body);font-size:12px;font-weight:500;color:var(--muted);margin-left:8px}
+.mq-item .hot{background:var(--teal);color:#06212A;font-weight:700;border-radius:999px;padding:2px 10px;font-size:12px;letter-spacing:.04em}
+.mq-item .cd{font-family:var(--display);font-size:17px;letter-spacing:.06em;font-variant-numeric:tabular-nums;min-width:9.5ch}
+.mq-dot{color:var(--teal);font-size:8px}
+@keyframes mq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+@media (prefers-reduced-motion:reduce){.mq{white-space:normal}.mq-track{animation:none;display:block;text-align:center}.mq-run+.mq-run{display:none}.mq-run{flex-wrap:wrap;justify-content:center}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+#pdDlg{overflow:auto}
+.pd-more{padding:40px 28px 32px;border-top:1px solid var(--hair);display:flex;flex-direction:column;gap:28px}
+.pd-more h4{margin:0 0 4px;font-size:22px;font-weight:900}
+.pd-more .story{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:24px;align-items:start}
+.pd-more .story p{margin:0 0 10px;color:var(--muted)}
+.details{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.detail{margin:0;background:var(--surface);border:1px solid var(--hair);border-radius:18px;overflow:hidden}
+.detail img{width:100%;aspect-ratio:1/1;object-fit:cover;background:var(--panel)}
+.detail figcaption{padding:14px 16px 16px;font-size:14px;color:var(--muted)}
+.detail figcaption b{display:block;color:var(--ink);font-size:16px;margin-bottom:2px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.fact{background:var(--panel);border-radius:18px;padding:18px 20px}
+.fact b{display:block;margin-bottom:6px}
+.fact ul{margin:0;padding-left:18px;color:var(--muted);font-size:14px}
+.fact p{margin:0;color:var(--muted);font-size:14px}
+@media (max-width:760px){.pd-more{padding:28px 18px}.pd-more .story{grid-template-columns:1fr;gap:8px}.details{grid-template-columns:1fr 1fr;gap:10px}.detail figcaption{padding:10px 12px 12px;font-size:13px}}
+
+#shotPreview[hidden]{display:none}
+.copyrow.big{flex-wrap:wrap}
+.copyrow.big strong{font-size:22px;word-break:break-all}
+.btn-copy{white-space:nowrap;flex:none}
+.bundle .cta{align-self:flex-start;font-size:14px;font-weight:700;color:var(--teal-deep)}
+.bundle.hero-b .cta{color:var(--teal-deep)}
+.imgnote{margin:0;font-size:12px;color:var(--muted)}
+.scroll-hint{display:none;font-size:12px;color:var(--muted);margin:0 0 6px}
+.pics{font-size:12px;color:var(--muted);margin:0;line-height:1.5}
+.fld textarea{min-height:70px;resize:vertical}
+.savings{color:var(--teal-ink);font-weight:700}
+.fallback{display:flex;flex-direction:column;gap:8px;background:#FFF6E5;border:1px solid #F2D29B;border-radius:12px;padding:12px 14px;color:#5A4210;font-size:14px}
+.fallback .btn{background:#1F8F55;color:#fff}
+@media (max-width:760px){
+  .scroll-hint{display:block}
+  .add-row{position:sticky;bottom:0;background:var(--surface);padding:10px 0;margin:0 -2px;z-index:1;border-top:1px solid var(--hair)}
+  .hero-in{gap:0}
+}
+
+.grid.gear{grid-template-columns:repeat(4,minmax(0,1fr))}
+.tile-img.cropbox{padding:0;position:relative;overflow:hidden;background:#F1EFEA}
+.tile-img.cropbox img{position:absolute;max-width:none;height:auto;object-fit:initial}
+.tile:hover .tile-img.cropbox img{transform:none}
+@media (max-width:980px){.grid.gear{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+.feature-copy .warmth{background:rgba(241,238,230,.12);border:1px solid rgba(241,238,230,.3);border-radius:12px;padding:10px 14px;color:#F1EEE6;font-size:15px}
+.feature-copy .warmth b{color:#fff}
+
+.grid.gear .tile-img{padding:0;background:#F1EFEA;aspect-ratio:4/5}
+
+.opt-note{margin-top:10px;background:#DCF1F4;border-radius:12px;padding:10px 14px;color:#0B6475;font-size:15px;line-height:1.6}.opt-note b{color:#13213D}
+
+.badge-new.warn{background:#C2410C;letter-spacing:.06em}.img-note{position:absolute;left:0;right:0;bottom:0;z-index:1;background:rgba(19,33,61,.9);color:#fff;font-size:12px;line-height:1.4;padding:7px 10px;text-align:center}.pd-note{background:#FFF4E5;border:1px solid #F5C27A;color:#7A3E00;border-radius:10px;padding:10px 12px;font-size:14px;line-height:1.5;margin:10px 0}.pd-note[hidden]{display:none}</style>
+</head>
+<body>
+<script>/* PREVIEW-GUARD：預覽版不會向收單後端提交訂單，只回覆模擬結果 */
+(function () {
+  var real = window.fetch.bind(window);
+  window.fetch = function (url, opt) {
+    var u = String(url && url.url || url || ''), m = String(opt && opt.method || 'GET').toUpperCase();
+    if (m !== 'GET' && /script\.google(usercontent)?\.com/.test(u)) {
+      return new Promise(function (res) { setTimeout(function () {
+        res(new Response(JSON.stringify({ ok: true, id: 'PREVIEW-' + Date.now().toString(36).toUpperCase(), amount: null, preview: true }), { headers: { 'Content-Type': 'application/json' } }));
+      }, 600); });
+    }
+    return real(url, opt);
+  };
+})();
+</script>
+<div class="pv-note" role="note" style="background:#EAF6F8;color:#0F1A28;border-bottom:1px solid #BFE3EA;font:500 13px/1.5 'Noto Sans HK',sans-serif;text-align:center;padding:8px 16px">預覽版：只供測試，提交訂單不會送出，亦不會收取款項。</div>
+<div class="strip" id="strip"><b>冬季訓練系列早鳥優惠價</b>　優惠至 12月1號・課堂交收・FPS／現金</div>
+<header class="bar">
+  <div class="bar-in">
+    <a class="brand" href="#top" aria-label="INITIATE SPORTS 網店首頁"><img class="brand-logo" src="img/brand-logo.png?v=406e634b" alt="INITIATE SPORTS"><span>INITIATE SPORTS</span></a>
+    <nav class="nav" aria-label="主要">
+      <a href="#sets">套裝優惠</a>
+      <a href="#kit">冬季系列</a>
+      <a href="#hoodie">衛衣</a>
+      <a href="#socks">運動襪</a>
+      <a href="#gear">器材</a>
+      <a href="#" data-open-sizes>尺碼指南</a>
+    </nav>
+    <button class="cart-btn" type="button" id="cartBtn" aria-label="打開購物車">購物車 <span class="count" id="cartCount">0</span></button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" aria-labelledby="heroTitle">
+    <div class="hero-in">
+      <div class="hero-copy">
+        <p class="eyebrow">Official Team Store · 1% Better Each Time</p>
+        <h1 id="heroTitle">專業訓練裝備<br><em>為每一次進步而設。</em></h1>
+        <p class="sub">INITIATE SPORTS 官方網店。冬季訓練系列專為課堂訓練而設；衛衣及運動襪同時提供成人尺碼，家長可與小朋友穿着親子同款。網上訂購，課堂交收。</p>
+        <div class="btns">
+          <a class="btn btn-primary" href="#sets">查看套裝優惠</a>
+          <a class="btn btn-ghost" href="#kit">選購單品</a>
+        </div>
+        <div class="hero-meta">
+          <div><strong data-bprice="set3">HK$420</strong><span>冬季三件套<span data-early>・早鳥優惠價</span></span></div>
+          <div><strong>HK$179</strong><span>衛衣 2 件或以上每件</span></div>
+          <div><strong>3 雙 $99</strong><span>運動襪任選</span></div>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <img class="b" alt="" src="img/jacket_front.webp?v=e766e10c" data-img="jacket_front.png" fetchpriority="high" decoding="async">
+        <img class="a" alt="" src="img/tee_front.webp?v=ba63e2b3" data-img="tee_front.png" fetchpriority="high" decoding="async">
+        <img class="c" alt="" src="img/hoodie_render.webp?v=b9d37893" data-img="hoodie_render.png" fetchpriority="high" decoding="async">
+      </div>
+    </div>
+  </section>
+
+  <div class="trust">
+    <ul>
+      <li><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h13v10H3zM16 10h3l2 3v4h-5"/><circle cx="7" cy="18" r="1.6"/><circle cx="18" cy="18" r="1.6"/></svg></span><span><b>課堂交收</b>毋須運費，由教練於課堂直接交予學生</span></li>
+      <li><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18M7 15h3"/></svg></span><span><b>FPS 或現金</b>支援 FPS 轉數或收貨時現金付款</span></li>
+      <li><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg></span><span><b>親子同款・設成人尺碼</b>衛衣及運動襪設兒童及成人尺碼</span></li>
+    </ul>
+  </div>
+
+  <section class="sec" id="sets" aria-labelledby="setsTitle">
+    <div class="sec-head">
+      <div><p class="eyebrow">Bundle &amp; Save</p><h2 id="setsTitle">套裝優惠</h2></div>
+      <p>毋須另選套裝：將單品加入購物車，系統會自動以最優惠的套裝價計算。<span data-early><br><b>早鳥優惠價至 12月1號（星期二）晚上 11:59</b>，12月2號起恢復原價。</span></p>
+    </div>
+    <div class="bundles">
+      <button type="button" class="bundle hero-b" data-goto="kit" data-bundle="set3">
+        <div><span class="tag">最優惠<span data-early>・早鳥優惠價</span></span><h3>冬季三件套</h3><div class="items">長袖訓練服＋立領外套＋訓練長褲</div></div>
+        <div class="imgs"><img alt="" src="img/tee_front.webp?v=ba63e2b3" data-img="tee_front.png" loading="lazy" decoding="async"><img alt="" src="img/jacket_front.webp?v=e766e10c" data-img="jacket_front.png" loading="lazy" decoding="async"><img alt="" src="img/pants_front.webp?v=f9d63e98" data-img="pants_front.png" loading="lazy" decoding="async"></div>
+        <span class="cta">選擇尺碼 →</span>
+        <div class="row"><span class="now">HK$420</span><span><span class="was">單件合計 HK$499</span><span class="save">節省 $79</span></span></div>
+      </button>
+      <button type="button" class="bundle" data-goto="kit" data-bundle="set2">
+        <div><span class="tag">保暖組合</span><h3>外套＋訓練長褲</h3><div class="items">課前課後保暖之選</div></div>
+        <div class="imgs"><img alt="" src="img/jacket_front.webp?v=e766e10c" data-img="jacket_front.png" loading="lazy" decoding="async"><img alt="" src="img/pants_front.webp?v=f9d63e98" data-img="pants_front.png" loading="lazy" decoding="async"></div>
+        <span class="cta">選擇尺碼 →</span>
+        <div class="row"><span class="now">HK$320</span><span><span class="was">HK$379</span><span class="save">節省 $59</span></span></div>
+      </button>
+      <button type="button" class="bundle" data-goto="kit" data-bundle="set_tp">
+        <div><span class="tag">課堂必備</span><h3>長袖＋訓練長褲</h3><div class="items">冬季課堂標準配搭</div></div>
+        <div class="imgs"><img alt="" src="img/tee_front.webp?v=ba63e2b3" data-img="tee_front.png" loading="lazy" decoding="async"><img alt="" src="img/pants_front.webp?v=f9d63e98" data-img="pants_front.png" loading="lazy" decoding="async"></div>
+        <span class="cta">選擇尺碼 →</span>
+        <div class="row"><span class="now">HK$260</span><span><span class="was">HK$300</span><span class="save">節省 $40</span></span></div>
+      </button>
+    </div>
+  </section>
+
+  <section class="sec" id="kit" aria-labelledby="kitTitle">
+    <div class="sec-head">
+      <div><p class="eyebrow">Winter Training · 2026</p><h2 id="kitTitle">冬季訓練系列</h2></div>
+      <p>深藍與白色流線弧形分割，配以湖水藍弧帶，簡約俐落。長袖訓練服適合課堂穿着，外套及訓練長褲兼顧保暖與活動自如。三件同時加入購物車，系統將自動以套裝價計算。</p>
+    </div>
+    <div class="grid" id="gridKit"></div>
+  </section>
+
+  <section class="sec" id="hoodie" aria-labelledby="hoodieTitle">
+    <div class="feature">
+      <div class="feature-art">
+        <span class="stamp">EST. 2023</span>
+        <img class="main" alt="AIM HIGH JUMP HIGH 親子衛衣正面" src="img/hoodie_render.webp?v=b9d37893" data-img="hoodie_render.png" loading="lazy" decoding="async">
+      </div>
+      <div class="feature-copy">
+        <p class="eyebrow">Family Matching · 再度推出</p>
+        <h2 id="hoodieTitle">AIM HIGH<br>JUMP HIGH 親子衛衣</h2>
+        <p>INITIATE SPORTS 親子衛衣再度推出。童裝 110 至 150、成人 S 至 3XL，家長與小朋友可穿着同款。燕麥灰配墨綠色 AIM HIGH JUMP HIGH 印花，設袋鼠袋。</p>
+        <p class="warmth">重磅抓絨內裏，保暖度高：建議於氣溫 <b>18°C 以下</b>穿着，天氣和暖時或會感到悶熱。</p>
+        <div class="pricebox"><span class="price">HK$199</span><span class="deal">2 件或以上每件 HK$179・親子兩件 HK$358</span></div>
+        <div class="thumbs">
+          <button type="button" data-open="hoodie-2023" aria-label="查看印花特寫"><img alt="" src="img/hoodie_print.jpg?v=26d89eba" data-img="hoodie_print.jpg" loading="lazy" decoding="async"></button>
+          <button type="button" data-open="hoodie-2023" aria-label="查看實拍"><img alt="" src="img/hoodie_front.jpg?v=6ced8b7d" data-img="hoodie_front.jpg" loading="lazy" decoding="async"></button>
+          <button type="button" data-open="hoodie-2023" aria-label="查看袋鼠袋"><img alt="" src="img/hoodie_pocket.jpg?v=7f76cdc3" data-img="hoodie_pocket.jpg" loading="lazy" decoding="async"></button>
+        </div>
+        <button type="button" class="btn btn-primary" data-open="hoodie-2023">選擇尺碼 →</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="socks" aria-labelledby="sockTitle">
+    <div class="sec-head">
+      <div><p class="eyebrow">Knee-high Socks</p><h2 id="sockTitle">運動襪</h2><p style="margin-top:8px">白色及膝長筒運動襪，毛巾底設計。設兒童及成人均碼，四款可自由混搭。</p></div>
+      <div class="packs" aria-label="運動襪價錢">
+        <div class="pack"><strong>$39</strong><span>1 雙</span></div>
+        <div class="pack best"><strong>$99</strong><span>3 雙・可混搭</span></div>
+      </div>
+    </div>
+    <div class="grid socks" id="gridSocks"></div>
+  </section>
+
+  <section class="sec" id="gear" aria-labelledby="gearTitle">
+    <div class="sec-head">
+      <div><p class="eyebrow">Ropes &amp; Gear</p><h2 id="gearTitle">跳繩及運動器材</h2></div>
+      <p>課堂指定跳繩及訓練器材，選擇顏色後即可訂購，並於課堂交收。拍子繩設兒童及成人款式。</p>
+    </div>
+    <div class="grid gear" id="gridGear"></div>
+  </section>
+
+  <section class="sec" aria-labelledby="howTitle">
+    <div class="sec-head"><div><p class="eyebrow">How It Works</p><h2 id="howTitle">購買流程</h2></div></div>
+    <ol class="how">
+      <li><b>選擇款式及尺碼</b><p>如對尺碼有疑問，請參閱尺碼指南，對照身高及實際尺寸。<b>貨品售出後不設換碼及退貨</b>，訂購前請確認尺碼。</p></li>
+      <li><b>填寫資料及付款</b><p>填寫學生姓名及上課班別，以 FPS 轉數並上載截圖，或選擇收貨時以現金付款。</p></li>
+      <li><b>課堂交收</b><p>貨品到貨後，教練將於課堂上交予學生，毋須另付運費。</p></li>
+    </ol>
+  </section>
+</main>
+
+<footer>
+  <div class="foot">
+    <div><div class="tagline">INITIATE SPORTS</div><div>1% Better Each Time</div></div>
+    <div>查詢：<a href="https://wa.me/85263317403" target="_blank" rel="noopener">WhatsApp +852 6331 7403</a></div>
+  </div>
+</footer>
+
+<dialog id="pdDlg" aria-labelledby="pdTitle">
+  <div class="dlg-head"><h2 id="pdHeadTitle">產品詳情</h2><button class="x" type="button" data-close aria-label="關閉">×</button></div>
+  <div class="pd">
+    <div class="pd-media">
+      <div class="main"><img id="pdImg" alt=""></div>
+      <p class="imgnote">產品圖為示意圖，實物以樣板為準。</p>
+      <div class="views" id="pdViews"></div>
+    </div>
+    <div class="pd-info">
+      <h3 id="pdTitle"></h3>
+      <div class="en" id="pdEn"></div>
+      <div class="price tbd" id="pdPrice"></div>
+      <p id="pdDesc"></p>
+      <ul class="spec" id="pdSpec"></ul>
+      <fieldset>
+        <div class="legend-row"><span id="sizeLegend">尺碼</span><button type="button" class="linkish" data-open-sizes>尺碼指南</button></div>
+        <div class="sizes" id="pdSizes" role="radiogroup" aria-labelledby="sizeLegend"></div>
+      </fieldset>
+      <div class="add-row">
+        <div class="qty" role="group" aria-label="數量">
+          <button type="button" id="qMinus" aria-label="減少數量">−</button>
+          <output id="qVal" aria-live="polite">1</output>
+          <button type="button" id="qPlus" aria-label="增加數量">+</button>
+        </div>
+        <button type="button" class="btn btn-navy" id="addBtn">加入購物車</button>
+      </div>
+      <p class="hint" id="pdHint" aria-live="polite"></p>
+    </div>
+  </div>
+  <div class="pd-more" id="pdMore"></div>
+</dialog>
+
+<dialog id="sgDlg" aria-labelledby="sgTitle">
+  <div class="dlg-head"><h2 id="sgTitle">尺碼指南</h2><button class="x" type="button" data-close aria-label="關閉">×</button></div>
+  <div class="tabs" role="tablist" id="sgTabs"></div>
+  <div class="sg" id="sgBody"></div>
+</dialog>
+
+<dialog id="cartDlg" class="drawer" aria-labelledby="cartTitle">
+  <div class="dlg-head"><h2 id="cartTitle">購物車</h2><button class="x" type="button" data-close aria-label="關閉">×</button></div>
+  <div class="view" id="vCart">
+    <ul class="cart-list" id="cartList"></ul>
+    <div class="cart-foot">
+      <div class="totals" id="totals"></div>
+      <button type="button" class="btn btn-navy" id="toCheckout">填資料付款 →</button>
+      <p class="hint" id="emptyHint" style="margin:0;text-align:center">請先選擇產品</p>
+    </div>
+  </div>
+  <form class="view" id="vBuyer" hidden novalidate>
+    <div class="co">
+      <p class="steps" aria-label="步驟"><span>1 選購</span><span aria-current="step">2 買家資料</span><span>3 付款</span></p>
+      <p class="hint" style="margin:0">請填寫學生中文全名、上課班別、家長電話及電郵，以便核對訂單、發送確認通知及課堂交收。</p>
+      <label class="fld">學生中文全名<input name="student" placeholder="例子：陳大文" autocomplete="off" required aria-required="true"></label>
+      <label class="fld">上課班別 / 日子<input name="cls" placeholder="例子：星期三 5–6pm 花式跳繩" required aria-required="true"></label>
+      <label class="fld">家長 WhatsApp 電話<input name="phone" type="tel" inputmode="numeric" autocomplete="tel" placeholder="例子：9123 4567" required aria-required="true"></label>
+      <label class="fld">家長電郵<input name="email" type="email" inputmode="email" autocomplete="email" placeholder="例子：parent@example.com" required aria-required="true"></label>
+      <label class="fld">備註（選填）<textarea name="note" placeholder="例子：兩位學生，陳大文要 4XS，陳小文要 3XS"></textarea></label>
+      <p class="pics">所收集的個人資料（學生姓名、班別、家長電話、電郵及付款截圖）只用於處理訂單、核對付款、發送訂單通知及課堂交收；除提供上述服務所需的供應商外，不會向第三方披露。詳情請參閱<a href="https://www.initiatesportshk.com/privacy.html" target="_blank" rel="noopener">個人資料收集聲明</a>。</p>
+      <p class="hint err" id="buyerErr" role="alert"></p>
+    </div>
+    <div class="cart-foot row2">
+      <button type="button" class="btn btn-line" id="backCart">返回</button>
+      <button type="submit" class="btn btn-navy">下一步 →</button>
+    </div>
+  </form>
+  <form class="view" id="vPay" hidden novalidate>
+    <div class="co">
+      <p class="steps" aria-label="步驟"><span>1 選購</span><span>2 買家資料</span><span aria-current="step">3 付款</span></p>
+      <div class="summary" id="paySummary"></div>
+      <fieldset class="fld">
+        <legend>付款方式</legend>
+        <label class="opt"><input type="radio" name="pay" value="fps" checked> FPS 轉數</label>
+        <label class="opt"><input type="radio" name="pay" value="cash"> 現金（收貨時付款）</label>
+      </fieldset>
+      <div id="fpsBox" class="paybox">
+        <div class="copyrow"><span>FPS 號碼 <strong>6709 3390</strong></span><button type="button" class="btn-copy" data-copy="67093390">複製</button></div>
+        <p class="hint" style="margin:0">請以 FPS 轉數後上載轉賬截圖；提交後將即時顯示訂單編號。</p>
+        <label class="fld">上載付款截圖<input type="file" name="shot" accept="image/*"></label>
+        <img id="shotPreview" alt="付款截圖預覽" hidden>
+      </div>
+      <div id="cashBox" class="paybox" hidden>
+        <p style="margin:0">請於課堂交收時以現金付款，並預備準確金額。提交後將即時顯示訂單編號。</p>
+      </div>
+      <label class="opt agree"><input type="checkbox" name="agree"> 我已核對尺碼，明白貨品售出後不設換碼及退貨。</label>
+      <p class="hint err" id="payErr" role="alert"></p>
+      <div class="fallback" id="waFallback" hidden></div>
+    </div>
+    <div class="cart-foot row2">
+      <button type="button" class="btn btn-line" id="backBuyer">返回</button>
+      <button type="submit" class="btn btn-navy">確認提交訂單</button>
+    </div>
+  </form>
+  <div class="view" id="vDone" hidden>
+    <div class="co">
+      <h3 style="margin:0" id="doneTitle">訂單已提交</h3>
+      <p style="margin:0">訂單編號</p>
+      <div class="copyrow big"><strong id="orderNo"></strong><button type="button" class="btn-copy" id="copyOrder">複製</button></div>
+      <div class="summary" id="doneSummary"></div>
+      <p class="hint" id="doneNote" style="margin:0">請截圖保存訂單編號。貨品將於課堂上交予學生；如有查詢，請 WhatsApp 6331 7403 並提供訂單編號。</p>
+    </div>
+    <div class="cart-foot"><button type="button" class="btn btn-navy" id="doneBtn">完成</button></div>
+  </div>
+</dialog>
+
+<script>
+const PRODUCTS = [{"id": "winter-ls-top", "sku": "IS-W26-LST", "category": "winter-kit", "name_zh": "冬季長袖訓練服", "name_en": "Winter Long-sleeve Training Top", "summary": "冬季課堂訓練上衣，柔軟透氣，伸展自如。", "description": "深藍與白色流線弧形分割，配以白線及漸寬湖水藍弧帶，延伸至雙袖；袖口白色羅紋。背面印有 1% BETTER EACH TIME 及 AIM HIGH JUMP HIGH。190G 牛奶絲面料，輕柔透氣，彈性良好。尺碼與新款短袖訓練服相同，只是袖長不同。", "material": "牛奶絲 190G", "print_method": "熱昇華", "colours": [{"name": "深藍", "hex": "#13213D"}, {"name": "白色", "hex": "#FFFFFF"}, {"name": "湖水藍", "hex": "#3DB8D0"}], "features": ["尺碼與新款短袖訓練服相同（袖長不同）", "圓領，常規寬鬆版型", "左胸品牌標誌，背面標語", "領口及袖口羅紋"], "sizes": ["7XS", "6XS", "5XS", "4XS", "3XS", "2XS", "XS", "S", "M", "L"], "size_chart": "tops", "images": ["tee_front.png", "tee_back.png"], "image_labels": ["正面", "背面"], "price_hkd": 120, "currency": "HKD", "status": "available", "unit": "件", "promo": {"type": "bundle", "label": "三件套 HK$420・長袖＋訓練長褲 HK$260"}, "details": [{"img": "d_winter-ls-top_0.jpg", "title": "胸前標誌", "text": "左胸印有原色 INITIATE SPORTS 標誌，以熱昇華工藝印製，與布料融為一體。"}, {"img": "d_winter-ls-top_1.jpg", "title": "弧形分割設計", "text": "深藍與白色以流線弧形分割，白線之下配以漸寬湖水藍弧帶，線條俐落而具動感。"}, {"img": "d_winter-ls-top_2.jpg", "title": "背面標語", "text": "背面印有 1% BETTER EACH TIME 及 AIM HIGH JUMP HIGH，寓意每次進步多一點，體現 INITIATE SPORTS 的訓練理念。"}], "story": ["專為冬季課堂而設的訓練上衣。190G 牛奶絲面料柔軟而具彈性，貼身而不悶熱，跑跳及伸展均不受束縛。", "採用熱昇華印花，圖案融入布料纖維，手感柔順，耐洗不褪色。"], "care": [], "price_early": 120, "price_regular": 140}, {"id": "winter-jacket", "sku": "IS-W26-JKT", "category": "winter-kit", "name_zh": "冬季立領外套", "name_en": "Winter Stand-collar Jacket", "summary": "立領全拉鏈訓練外套，課前課後保暖之選。", "description": "全身深藍，胸前飾以白線及漸寬湖水藍弧帶；背面印有 1% BETTER EACH TIME 及 AIM HIGH JUMP HIGH。立領全拉鏈設計，拉鏈頂部設防夾布擋。", "material": "健康布 280G（90% 聚酯纖維、10% 氨綸）", "print_method": "熱昇華", "colours": [{"name": "深藍", "hex": "#13213D"}, {"name": "白色", "hex": "#FFFFFF"}, {"name": "湖水藍", "hex": "#3DB8D0"}], "features": ["立領全拉鏈，頂部防夾布擋", "兩側插袋", "袖口及下擺羅紋"], "sizes": ["7XS", "6XS", "5XS", "4XS", "3XS", "2XS", "XS", "S", "M", "L"], "size_chart": "jacket", "images": ["jacket_front.png", "jacket_back.png"], "image_labels": ["正面", "背面"], "price_hkd": 199, "currency": "HKD", "status": "available", "unit": "件", "promo": {"type": "bundle", "label": "三件套 HK$420・外套＋訓練長褲 HK$320"}, "details": [{"img": "d_winter-jacket_0.jpg", "title": "立領拉鏈", "text": "立領設計有效擋風；拉鏈頂部設布擋，拉至頂部亦不會夾到下巴。"}, {"img": "d_winter-jacket_1.jpg", "title": "胸前標誌", "text": "左胸印有原色品牌標誌，配以白線及湖水藍弧帶。"}, {"img": "d_winter-jacket_2.jpg", "title": "兩側插袋", "text": "兩側設插袋，方便放手及存放輕便物品。"}, {"img": "d_winter-jacket_3.jpg", "title": "背面標語", "text": "背面印有 1% BETTER EACH TIME 及 AIM HIGH JUMP HIGH。"}], "story": ["課前熱身及課後保暖的理想外層。280G 健康布具份量，有效擋風而不顯厚重。", "熱身後可輕鬆脫下，下課即可穿回，避免着涼。"], "care": [], "price_early": 199, "price_regular": 230}, {"id": "jogger-pants", "sku": "IS-W26-PNT", "category": "winter-kit", "name_zh": "黑色訓練長褲", "name_en": "Black Jogger Pants", "summary": "全黑訓練長褲，螺紋收腳，兩側拉鏈口袋。", "description": "全黑設計，右側口袋位置印有白色品牌標誌。彈性腰頭配內置抽繩，兩側拉鏈口袋，褲腳螺紋收口。", "material": "健康布 280G（90% 聚酯纖維、10% 氨綸）", "print_method": "印花", "colours": [{"name": "黑色", "hex": "#141414"}, {"name": "白色", "hex": "#FFFFFF"}], "features": ["彈性腰頭＋內置抽繩", "兩側拉鏈口袋", "褲腳螺紋收口"], "sizes": ["7XS", "6XS", "5XS", "4XS", "3XS", "2XS", "XS", "S", "M", "L"], "size_chart": "pants", "images": ["pants_front.png", "pants_back.png"], "image_labels": ["正面", "背面"], "price_hkd": 180, "currency": "HKD", "status": "available", "unit": "條", "promo": {"type": "bundle", "label": "三件套 HK$420・配外套 HK$320・配長袖 HK$260"}, "details": [{"img": "d_jogger-pants_0.jpg", "title": "口袋標誌", "text": "右側口袋位置印有白色品牌標誌，黑白分明。"}, {"img": "d_jogger-pants_1.jpg", "title": "彈性腰頭", "text": "彈性腰頭配內置抽繩，可按需要調節鬆緊。"}, {"img": "d_jogger-pants_2.jpg", "title": "拉鏈口袋", "text": "兩側設拉鏈口袋，活動時物品不易掉出。"}], "story": ["百搭的全黑訓練長褲，可配襯長袖訓練服或外套。280G 健康布彈性良好，蹲跳動作靈活自如。", "收腳設計俐落，避免拖地，日常穿着同樣合適。"], "care": [], "price_early": 180, "price_regular": 200}, {"id": "socks-1", "sku": "IS-W26-SK1", "category": "socks", "name_zh": "運動襪・藍色雙槓", "name_en": "White Sports Socks – White with Blue Double Stripe", "summary": "白色及膝長筒襪，藍色雙槓，外側印有品牌標誌。", "description": "白色及膝長筒運動襪，襪頂藍色雙槓，外側印有黑色品牌標誌；毛巾底設計，左右兩隻相同。", "material": "及膝長筒運動襪，毛巾底", "print_method": "印花", "colours": [{"name": "白色", "hex": "#FFFFFF"}, {"name": "藍色", "hex": "#2A4FB8"}, {"name": "黑色 logo", "hex": "#1A1A1A"}], "features": ["及膝長筒", "毛巾底", "外側品牌標誌", "左右兩隻相同"], "sizes": ["兒童均碼", "成人均碼"], "size_chart": "socks", "images": ["socks_1_outer.png", "socks_1_inner.png"], "image_labels": ["外側", "內側"], "price_hkd": 39, "currency": "HKD", "status": "available", "promo": {"type": "mix_and_match", "group": "socks", "tiers": [{"qty": 3, "price_hkd": 99}], "label": "3 雙 HK$99，可混搭"}, "unit": "雙", "details": [{"img": "d_socks-1_0.jpg", "title": "外側標誌", "text": "外側置中印有黑色 INITIATE SPORTS 標誌。"}, {"img": "d_socks-1_1.jpg", "title": "藍色雙槓", "text": "襪頂藍色雙槓，經典運動襪設計。"}, {"img": "d_socks-1_2.jpg", "title": "毛巾底", "text": "毛巾底設計，提供柔軟緩衝，跳躍落地更舒適。"}], "story": ["白色及膝長筒運動襪，襪頂藍色雙槓，外側印有黑色品牌標誌。毛巾底設計，柔軟舒適。", "任選 3 雙 HK$99，款式及尺碼可自由配搭。"], "care": []}, {"id": "socks-2", "sku": "IS-W26-SK2", "category": "socks", "name_zh": "運動襪・純白大標誌", "name_en": "White Sports Socks – Plain White – Big Logo", "summary": "純白及膝長筒襪，外側印有大型品牌標誌。", "description": "純白及膝長筒運動襪，外側印有大型黑色品牌標誌；毛巾底設計，左右兩隻相同。", "material": "及膝長筒運動襪，毛巾底", "print_method": "印花", "colours": [{"name": "白色", "hex": "#FFFFFF"}, {"name": "黑色 logo", "hex": "#1A1A1A"}], "features": ["及膝長筒", "毛巾底", "外側品牌標誌", "左右兩隻相同"], "sizes": ["兒童均碼", "成人均碼"], "size_chart": "socks", "images": ["socks_2_outer.png", "socks_2_inner.png"], "image_labels": ["外側", "內側"], "price_hkd": 39, "currency": "HKD", "status": "available", "promo": {"type": "mix_and_match", "group": "socks", "tiers": [{"qty": 3, "price_hkd": 99}], "label": "3 雙 HK$99，可混搭"}, "unit": "雙", "details": [{"img": "d_socks-2_0.jpg", "title": "外側標誌", "text": "外側印有大型黑色 INITIATE SPORTS 標誌，簡約而醒目。"}, {"img": "d_socks-2_1.jpg", "title": "純白襪頂", "text": "純白無間條設計，簡約百搭。"}, {"img": "d_socks-2_2.jpg", "title": "毛巾底", "text": "毛巾底設計，提供柔軟緩衝，跳躍落地更舒適。"}], "story": ["純白及膝長筒運動襪，外側印有大型黑色品牌標誌。毛巾底設計，柔軟舒適。", "任選 3 雙 HK$99，款式及尺碼可自由配搭。"], "care": []}, {"id": "socks-3", "sku": "IS-W26-SK3", "category": "socks", "name_zh": "運動襪・黑色雙槓", "name_en": "White Sports Socks – White with Black Double Stripe", "summary": "白色及膝長筒襪，黑色雙槓，外側印有品牌標誌。", "description": "白色及膝長筒運動襪，襪頂黑色雙槓，外側印有黑色品牌標誌；毛巾底設計，左右兩隻相同。", "material": "及膝長筒運動襪，毛巾底", "print_method": "印花", "colours": [{"name": "白色", "hex": "#FFFFFF"}, {"name": "黑色", "hex": "#1A1A1A"}, {"name": "黑色 logo", "hex": "#1A1A1A"}], "features": ["及膝長筒", "毛巾底", "外側品牌標誌", "左右兩隻相同"], "sizes": ["兒童均碼", "成人均碼"], "size_chart": "socks", "images": ["socks_3_outer.png", "socks_3_inner.png"], "image_labels": ["外側", "內側"], "price_hkd": 39, "currency": "HKD", "status": "available", "promo": {"type": "mix_and_match", "group": "socks", "tiers": [{"qty": 3, "price_hkd": 99}], "label": "3 雙 HK$99，可混搭"}, "unit": "雙", "details": [{"img": "d_socks-3_0.jpg", "title": "外側標誌", "text": "外側置中印有黑色 INITIATE SPORTS 標誌。"}, {"img": "d_socks-3_1.jpg", "title": "黑色雙槓", "text": "襪頂黑色雙槓，經典運動襪設計。"}, {"img": "d_socks-3_2.jpg", "title": "毛巾底", "text": "毛巾底設計，提供柔軟緩衝，跳躍落地更舒適。"}], "story": ["白色及膝長筒運動襪，襪頂黑色雙槓，外側印有黑色品牌標誌。毛巾底設計，柔軟舒適。", "任選 3 雙 HK$99，款式及尺碼可自由配搭。"], "care": []}, {"id": "socks-4", "sku": "IS-W26-SK4", "category": "socks", "name_zh": "運動襪・紅色雙槓", "name_en": "White Sports Socks – White with Red Double Stripe", "summary": "白色及膝長筒襪，紅色雙槓，外側印有品牌標誌。", "description": "白色及膝長筒運動襪，襪頂紅色雙槓，外側印有黑色品牌標誌；毛巾底設計，左右兩隻相同。", "material": "及膝長筒運動襪，毛巾底", "print_method": "印花", "colours": [{"name": "白色", "hex": "#FFFFFF"}, {"name": "紅色", "hex": "#D1242F"}, {"name": "黑色 logo", "hex": "#1A1A1A"}], "features": ["及膝長筒", "毛巾底", "外側品牌標誌", "左右兩隻相同"], "sizes": ["兒童均碼", "成人均碼"], "size_chart": "socks", "images": ["socks_4_outer.png", "socks_4_inner.png"], "image_labels": ["外側", "內側"], "price_hkd": 39, "currency": "HKD", "status": "available", "promo": {"type": "mix_and_match", "group": "socks", "tiers": [{"qty": 3, "price_hkd": 99}], "label": "3 雙 HK$99，可混搭"}, "unit": "雙", "details": [{"img": "d_socks-4_0.jpg", "title": "外側標誌", "text": "外側置中印有黑色 INITIATE SPORTS 標誌。"}, {"img": "d_socks-4_1.jpg", "title": "紅色雙槓", "text": "襪頂紅色雙槓，經典運動襪設計。"}, {"img": "d_socks-4_2.jpg", "title": "毛巾底", "text": "毛巾底設計，提供柔軟緩衝，跳躍落地更舒適。"}], "story": ["白色及膝長筒運動襪，襪頂紅色雙槓，外側印有黑色品牌標誌。毛巾底設計，柔軟舒適。", "任選 3 雙 HK$99，款式及尺碼可自由配搭。"], "care": []}, {"id": "hoodie-2023", "sku": "IS-HD-23", "category": "hoodie", "name_zh": "AIM HIGH JUMP HIGH 親子衛衣", "name_en": "AIM HIGH JUMP HIGH Hoodie", "summary": "重磅抓絨連帽衛衣，親子同款，建議 18°C 以下穿着。", "description": "純色重磅抓絨連帽衛衣，燕麥灰配墨綠色 AIM HIGH JUMP HIGH 印花，並印有 1% BETTER EACH TIME 及 EST. 2023。設袋鼠袋，袖口及衣腳羅紋收口；設童裝及成人尺碼，可作親子同款。注意：面料厚重並設抓絨內裏，保暖度高，建議於氣溫 18°C 以下穿着。", "material": "重磅抓絨", "print_method": "墨綠色印花", "colours": [{"name": "燕麥灰", "hex": "#E4E0D8"}, {"name": "墨綠", "hex": "#1F4A3A"}], "features": ["連帽設計", "重磅抓絨內裏", "建議 18°C 以下穿着", "袋鼠袋", "童裝及成人尺碼"], "images": ["hoodie_render.png", "hoodie_print.jpg", "hoodie_front.jpg", "hoodie_pocket.jpg"], "image_labels": ["正面", "印花特寫", "實拍", "袋鼠袋"], "sizes": ["110", "120", "130", "140", "150", "S", "M", "L", "XL", "2XL", "3XL"], "size_chart": "hoodie", "price_hkd": 199, "unit": "件", "promo": {"label": "2 件或以上 HK$179／件", "min": 2, "each": 179}, "details": [{"img": "d_hoodie-2023_0.jpg", "title": "AIM HIGH JUMP HIGH 印花", "text": "墨綠色 AIM HIGH JUMP HIGH 印花，配以 1% BETTER EACH TIME 及 EST. 2023。"}, {"img": "d_hoodie-2023_1.jpg", "title": "袋鼠袋", "text": "前置袋鼠袋，天氣寒冷時可作暖手之用。"}, {"img": "d_hoodie-2023_2.jpg", "title": "連帽設計", "text": "連帽設計，有效擋風保暖。"}, {"img": "d_hoodie-2023_3.jpg", "title": "羅紋袖口及衣腳", "text": "袖口及衣腳羅紋收口，保暖且不易變形。"}], "story": ["INITIATE SPORTS 親子衛衣再度推出。面料克重高並設抓絨內裏，保暖度高；以香港天氣而言，建議於氣溫 18°C 以下穿着。", "燕麥灰配墨綠色印花，設童裝及成人尺碼，家長與小朋友可穿着同款。"], "care": []}, {"id": "gear-beadrope", "sku": "gear-beadrope", "category": "gear", "name_zh": "專業硬珠拍子繩（兒童款）", "name_en": "Beaded Rope – Kids", "summary": "兒童長度，附繩袋，13 款配色。", "description": "專業硬珠拍子繩（兒童長度），附繩袋，提供 13 款雙色配色；另設成人款。", "material": "附繩袋・兒童長度", "print_method": "", "colours": [], "features": [], "images": ["gear_beadrope"], "image_labels": ["產品介紹"], "fit": "cover", "sizes": ["紫×白", "粉紅×黑", "黃×黑", "黃×白", "紫×黑", "粉紅×紫", "黃×藍", "藍×白", "藍×黑", "粉紅×藍", "粉紅×白", "綠×白", "綠×黑"], "variant_label": "顏色", "size_chart": null, "price_hkd": 100, "unit": "條", "crop": null, "care": [], "details": [], "story": ["專業硬珠拍子繩（兒童長度），附繩袋，提供 13 款雙色配色；另設成人款。", "現貨供應，售完即止；貨品將於課堂上一併交收。"], "badge": "兒童款"}, {"id": "gear-beadrope-adult", "sku": "gear-beadrope-adult", "category": "gear", "name_zh": "專業硬珠拍子繩（成人款）", "name_en": "Beaded Rope – Adult", "summary": "成人長度，附繩袋，13 款配色。", "description": "專業硬珠拍子繩（成人長度），附繩袋，提供 13 款雙色配色，可與兒童款配搭同色。", "material": "附繩袋・成人長度", "print_method": "", "colours": [], "features": [], "images": ["gear_beadrope"], "image_labels": ["產品介紹"], "fit": "cover", "sizes": ["紫×白", "粉紅×黑", "黃×黑", "黃×白", "紫×黑", "粉紅×紫", "黃×藍", "藍×白", "藍×黑", "粉紅×藍", "粉紅×白", "綠×白", "綠×黑"], "variant_label": "顏色", "size_chart": null, "price_hkd": 100, "unit": "條", "crop": null, "care": [], "details": [], "story": ["專業硬珠拍子繩（成人長度），附繩袋，提供 13 款雙色配色，可與兒童款配搭同色。", "現貨供應，售完即止；貨品將於課堂上一併交收。"], "badge": "成人款"}, {"id": "gear-canvasbag", "sku": "gear-canvasbag", "category": "gear", "name_zh": "帆布跳繩袋", "name_en": "Canvas Rope Bag", "summary": "米白及深藍兩色，3 個 HK$50，可混色。", "description": "帆布跳繩袋，設米白及深藍兩色；任選 3 個 HK$50，可混色配搭。", "material": "3 個一組優惠（可混色）", "print_method": "", "colours": [], "features": [], "images": ["gear_canvasbag"], "image_labels": ["產品介紹"], "fit": "cover", "sizes": ["米白", "深藍"], "variant_label": "顏色", "size_chart": null, "price_hkd": 20, "unit": "個", "crop": null, "care": [], "details": [], "story": ["帆布跳繩袋，設米白及深藍兩色；任選 3 個 HK$50，可混色配搭。", "現貨供應，售完即止；貨品將於課堂上一併交收。"], "promo": {"label": "3 個 HK$50，可混色"}}, {"id": "gear-speedrope", "sku": "gear-speedrope", "category": "gear", "name_zh": "速度膠繩", "name_en": "Speed Rope", "summary": "6 款繩柄顏色，2 款繩芯顏色。", "description": "速度膠繩，繩柄設白、黑、粉紅、紫、藍、黃 6 色，繩芯設白、藍 2 色，可自由配搭。", "material": "", "print_method": "", "colours": [], "features": [], "images": ["gear_speedrope"], "image_labels": ["產品介紹"], "fit": "cover", "sizes": ["白柄・白芯", "白柄・藍芯", "黑柄・白芯", "黑柄・藍芯", "粉柄・白芯", "粉柄・藍芯", "紫柄・白芯", "紫柄・藍芯", "藍柄・白芯", "藍柄・藍芯", "黃柄・白芯", "黃柄・藍芯"], "variant_label": "繩柄・繩芯", "size_chart": null, "price_hkd": 80, "unit": "條", "crop": null, "care": [], "details": [], "story": ["速度膠繩，繩柄設白、黑、粉紅、紫、藍、黃 6 色，繩芯設白、藍 2 色，可自由配搭。", "現貨供應，售完即止；貨品將於課堂上一併交收。"]}, {"id": "gear-speedcord", "sku": "gear-speedcord", "category": "gear", "name_zh": "速度膠繩替換繩芯", "name_en": "Speed Rope Replacement Cord", "summary": "替換繩芯，不包括繩柄。白或藍。", "description": "速度膠繩專用替換繩芯，設白、藍 2 色。只包括繩芯，不包括繩柄，適用於已購買速度膠繩人士。", "material": "", "print_method": "", "colours": [], "features": [], "images": ["gear_speedrope"], "image_labels": ["參考圖（整套速度膠繩）"], "fit": "cover", "sizes": ["白", "藍"], "variant_label": "顏色", "size_chart": null, "price_hkd": 30, "unit": "條", "crop": null, "care": [], "details": [], "story": ["速度膠繩專用替換繩芯，設白、藍 2 色。只包括繩芯，不包括繩柄，適用於已購買速度膠繩人士。", "圖片所示為整套速度膠繩，僅供參考；本產品只包括繩芯。", "現貨供應，售完即止；貨品將於課堂上一併交收。"], "badge": "只限繩芯", "badge_cls": "warn", "img_note": "圖片為整套速度膠繩，僅供參考｜本產品只包括繩芯，不包括繩柄", "pd_note": "請注意：本產品為替換繩芯，<b>不包括繩柄</b>。圖片所示為整套速度膠繩，僅供參考繩芯款式及顏色；如需整套，請選購「速度膠繩」。"}, {"id": "gear-wirerope", "sku": "gear-wirerope", "category": "gear", "name_zh": "鋼絲速度繩", "name_en": "Wire Speed Rope", "summary": "8 款顏色可選。", "description": "鋼絲速度繩，設粉紅、綠、黃、藍、紅、黑、紫、橙 8 色。", "material": "", "print_method": "", "colours": [], "features": [], "images": ["gear_wirerope"], "image_labels": ["產品介紹"], "fit": "cover", "sizes": ["粉紅", "綠", "黃", "藍", "紅", "黑", "紫", "橙"], "variant_label": "顏色", "size_chart": null, "price_hkd": 100, "unit": "條", "crop": null, "care": [], "details": [], "story": ["鋼絲速度繩，設粉紅、綠、黃、藍、紅、黑、紫、橙 8 色。", "現貨供應，售完即止；貨品將於課堂上一併交收。"]}, {"id": "gear-wirecord", "sku": "gear-wirecord", "category": "gear", "name_zh": "鋼絲速度繩替換繩芯", "name_en": "Wire Rope Replacement Cable", "summary": "替換繩芯，不包括繩柄。", "description": "鋼絲速度繩專用替換繩芯，只包括繩芯，不包括繩柄，適用於已購買鋼絲速度繩人士。", "material": "", "print_method": "", "colours": [], "features": [], "images": ["gear_wirerope"], "image_labels": ["參考圖（整套鋼絲速度繩）"], "fit": "cover", "sizes": ["標準"], "variant_label": "款式", "size_chart": null, "price_hkd": 30, "unit": "條", "crop": null, "care": [], "details": [], "story": ["鋼絲速度繩專用替換繩芯，只包括繩芯，不包括繩柄，適用於已購買鋼絲速度繩人士。", "圖片所示為整套鋼絲速度繩，僅供參考；本產品只包括繩芯。", "現貨供應，售完即止；貨品將於課堂上一併交收。"], "badge": "只限繩芯", "badge_cls": "warn", "img_note": "圖片為整套鋼絲速度繩，僅供參考｜本產品只包括繩芯，不包括繩柄", "pd_note": "請注意：本產品為替換繩芯，<b>不包括繩柄</b>。圖片所示為整套鋼絲速度繩，僅供參考繩芯款式及顏色；如需整套，請選購「鋼絲速度繩」。"}, {"id": "gear-pickleset", "sku": "gear-pickleset", "category": "gear", "name_zh": "匹克球拍套裝", "name_en": "Pickleball Set", "summary": "球拍 1 塊、匹克球 2 個、球拍袋 1 個。", "description": "匹克球拍套裝，包括球拍 1 塊、匹克球 2 個及球拍袋 1 個，適合初學者。", "material": "球拍 ×1＋匹克球 ×2＋球拍袋 ×1", "print_method": "", "colours": [], "features": [], "images": ["gear_pickleset"], "image_labels": ["產品介紹"], "fit": "cover", "sizes": ["標準"], "variant_label": "款式", "size_chart": null, "price_hkd": 120, "unit": "套", "crop": null, "care": [], "details": [], "story": ["匹克球拍套裝，包括球拍 1 塊、匹克球 2 個及球拍袋 1 個，適合初學者。", "現貨供應，售完即止；貨品將於課堂上一併交收。"]}];
+const SIZES = {"status": "provisional", "note": "貨品售出後不設換碼及退貨，請於訂購前核對尺碼。衣服採用國際尺碼，請以身高為主要參考選擇；尺寸為平鋪量度（胸闊、腰闊等為半圍），單位為 cm，或有 1–3 cm 誤差。", "tops": {"title": "冬季長袖訓練服", "columns": ["尺碼", "參考身高 (cm)", "參考體重 (kg)", "衫長", "胸闊", "袖長"], "note": "長袖訓練服尺碼與新款短袖訓練服相同，只是袖長不同；可參照小朋友現時穿着的新款短袖訓練服尺碼選擇。 長袖、外套及訓練長褲尺碼表各有不同，同一尺碼的參考身高未必一致，請逐件對照身高選擇。", "rows": [["7XS", "100–109", "15–16", 45, 35, 42.5], ["6XS", "110–119", "17–21", 48, 37, 45.5], ["5XS", "120–129", "18–24", 52, 40, 48.5], ["4XS", "130–139", "22–26", 56, 43, 51.5], ["3XS", "140–149", "24–34", 60, 47, 54.5], ["2XS", "150–155", "26–38", 65, 50, 57.5], ["XS", "155–165", "40–50", 66.5, 48.5, 58], ["S", "165–170", "50–60", 68.5, 50.5, 59], ["M", "170–175", "60–65", 70.5, 52.5, 60], ["L", "175–180", "65–75", 72.5, 54.5, 61]]}, "pants": {"title": "黑色訓練長褲", "columns": ["尺碼", "參考身高 (cm)", "參考體重 (kg)", "褲長", "腰闊（拉開量）", "坐闊", "褲腳闊"], "note": "長袖、外套及訓練長褲尺碼表各有不同，同一尺碼的參考身高未必一致，請逐件對照身高選擇。", "rows": [["7XS", "110–119", "17–21", 68, 21, 41, 9.3], ["6XS", "120–129", "18–24", 73, 23, 43, 9.9], ["5XS", "130–139", "22–26", 78, 25, 45, 10.5], ["4XS", "140–149", "24–34", 83, 27, 47, 11.1], ["3XS", "150–155", "26–38", 88, 29, 49, 11.7], ["2XS", "155–165", "40–50", 93, 31, 51, 12.3], ["XS", "165–170", "50–60", 94, 31, 52, 12.3], ["S", "170–175", "60–65", 97, 33, 54, 12.9], ["M", "175–180", "65–75", 100, 35, 56, 13.5], ["L", "180–185", "75–85", 103, 37, 58, 14.1]]}, "socks": {"title": "白色運動襪", "columns": ["尺碼", "適合鞋碼（歐碼）", "參考身高 (cm)", "襪底長度（平放）", "襪筒長度（平放）", "襪底長度（拉伸範圍）", "襪筒長度（拉伸範圍）"], "note": "貨品售出後不設換碼及退貨。請以鞋碼為主要參考：鞋碼 34 或以下選兒童均碼，35 或以上選成人均碼。尺寸單位為 cm，為人手平放量度，拉伸範圍視乎布料彈性，或有 1–3 cm 誤差。", "rows": [["兒童均碼", "26–34", "100–140", "16", "34", "16–26", "34–47"], ["成人均碼", "35–45", "150–190", "22", "48", "21–33", "46–59"]]}, "jacket": {"title": "冬季立領外套", "columns": ["尺碼", "參考身高 (cm)", "參考體重 (kg)", "衫長", "胸闊", "袖長"], "note": "長袖、外套及訓練長褲尺碼表各有不同，同一尺碼的參考身高未必一致，請逐件對照身高選擇。", "rows": [["7XS", "110–119", "17–21", 42, 35, 43], ["6XS", "120–129", "18–24", 46, 38, 48], ["5XS", "130–139", "22–26", 50, 41, 53], ["4XS", "140–149", "24–34", 54, 44, 59], ["3XS", "150–155", "26–38", 58, 47, 65], ["2XS", "155–165", "40–50", 62, 50, 70], ["XS", "165–170", "50–60", 61, 49, 73], ["S", "170–175", "60–65", 63.5, 51, 75], ["M", "175–180", "65–75", 66, 53, 77], ["L", "180–185", "75–85", 68.5, 55, 79]]}, "hoodie": {"title": "AIM HIGH JUMP HIGH 親子衛衣", "columns": ["尺碼", "參考身高 (cm)", "參考體重 (kg)", "衫長", "胸闊", "膊闊", "袖長"], "note": "貨品售出後不設換碼及退貨。衛衣為寬鬆版型，尺寸與訓練服不同。尺碼以身高為主要參考，體重作輔助參考；尺寸為平鋪人手量度，單位為 cm，或有 1–3 cm 誤差。", "rows": [["110", "110–115", "15–22.5", "44", "45", "41", "40"], ["120", "115–125", "22.5–27.5", "49", "48", "45", "45"], ["130", "125–135", "27.5–35", "54", "51.5", "48", "50"], ["140", "135–145", "35–40", "58", "54.5", "52", "55"], ["150", "145–160", "40–50", "62", "57.5", "55", "58"], ["S", "160–170", "50–55", "65", "60", "63", "53"], ["M", "170–175", "60–65", "67", "62.5", "65", "54"], ["L", "175–180", "70–75", "69", "65", "67", "55"], ["XL", "180–185", "80–85", "71", "67.5", "69", "56"], ["2XL", "185–190", "90–100", "73", "70.5", "71", "57"], ["3XL", "190–210", "105–115", "75", "73.5", "73", "58"]]}};
+const IMAGES = {"jacket_back.png":"img/jacket_back.webp?v=c5b17e6f","jacket_front.png":"img/jacket_front.webp?v=e766e10c","pants_back.png":"img/pants_back.webp?v=1c73d992","pants_front.png":"img/pants_front.webp?v=f9d63e98","tee_back.png":"img/tee_back.webp?v=66ba6c2b","tee_front.png":"img/tee_front.webp?v=ba63e2b3","socks_1_outer.png":"img/socks_1_outer.webp?v=1855e88d","socks_1_inner.png":"img/socks_1_inner.webp?v=0925c2aa","socks_2_outer.png":"img/socks_2_outer.webp?v=55e14072","socks_2_inner.png":"img/socks_2_inner.webp?v=5146750f","socks_3_outer.png":"img/socks_3_outer.webp?v=5bcbf2d9","socks_3_inner.png":"img/socks_3_inner.webp?v=34a533d3","socks_4_outer.png":"img/socks_4_outer.webp?v=910ec816","socks_4_inner.png":"img/socks_4_inner.webp?v=2b216c8e","hoodie_front.jpg":"img/hoodie_front.jpg?v=6ced8b7d","hoodie_print.jpg":"img/hoodie_print.jpg?v=26d89eba","hoodie_side.jpg":"img/hoodie_side.jpg?v=5d658e53","hoodie_pocket.jpg":"img/hoodie_pocket.jpg?v=7f76cdc3","white_tee_front.png":"img/white_tee_front.webp?v=bdba921b","white_jacket_front.png":"img/white_jacket_front.webp?v=94fd43e0","hoodie_render.png":"img/hoodie_render.webp?v=b9d37893","d_winter-ls-top_0.jpg":"img/d_winter-ls-top_0.jpg?v=c71d0c4c","d_winter-ls-top_1.jpg":"img/d_winter-ls-top_1.jpg?v=904ac5d4","d_winter-ls-top_2.jpg":"img/d_winter-ls-top_2.jpg?v=a2c60522","d_winter-jacket_0.jpg":"img/d_winter-jacket_0.jpg?v=fc1f502b","d_winter-jacket_1.jpg":"img/d_winter-jacket_1.jpg?v=f43b7bba","d_winter-jacket_2.jpg":"img/d_winter-jacket_2.jpg?v=475010eb","d_winter-jacket_3.jpg":"img/d_winter-jacket_3.jpg?v=6f405826","d_jogger-pants_0.jpg":"img/d_jogger-pants_0.jpg?v=7fa967f5","d_jogger-pants_1.jpg":"img/d_jogger-pants_1.jpg?v=3063b26c","d_jogger-pants_2.jpg":"img/d_jogger-pants_2.jpg?v=7a50ac77","d_socks-1_0.jpg":"img/d_socks-1_0.jpg?v=e3435e4d","d_socks-1_1.jpg":"img/d_socks-1_1.jpg?v=e5bdc1a7","d_socks-1_2.jpg":"img/d_socks-1_2.jpg?v=bcef00fd","d_socks-2_0.jpg":"img/d_socks-2_0.jpg?v=6c8ef52b","d_socks-2_1.jpg":"img/d_socks-2_1.jpg?v=f01f35d1","d_socks-2_2.jpg":"img/d_socks-2_2.jpg?v=a50f4ab1","d_socks-3_0.jpg":"img/d_socks-3_0.jpg?v=c0e5c819","d_socks-3_1.jpg":"img/d_socks-3_1.jpg?v=6ada8f15","d_socks-3_2.jpg":"img/d_socks-3_2.jpg?v=a15aae6c","d_socks-4_0.jpg":"img/d_socks-4_0.jpg?v=7c1c4c79","d_socks-4_1.jpg":"img/d_socks-4_1.jpg?v=99b2b87a","d_socks-4_2.jpg":"img/d_socks-4_2.jpg?v=bd840747","d_hoodie-2023_0.jpg":"img/d_hoodie-2023_0.jpg?v=e306da24","d_hoodie-2023_1.jpg":"img/d_hoodie-2023_1.jpg?v=311363f4","d_hoodie-2023_2.jpg":"img/d_hoodie-2023_2.jpg?v=eadef371","d_hoodie-2023_3.jpg":"img/d_hoodie-2023_3.jpg?v=d4491e54","gear_beadrope":"img/gear_beadrope.jpg?v=aca4438d","gear_canvasbag":"img/gear_canvasbag.jpg?v=bb752a9b","gear_speedrope":"img/gear_speedrope.jpg?v=644af972","gear_wirerope":"img/gear_wirerope.jpg?v=98153188","gear_pickleset":"img/gear_pickleset.jpg?v=d9c7baef"};
+const WA = '85263317403';
+const EARLY_END = new Date('2026-12-01T23:59:59+08:00');
+const EARLY = Date.now() <= EARLY_END.getTime();
+PRODUCTS.forEach(p => { if (p.price_early) p.price_hkd = EARLY ? p.price_early : p.price_regular; });
+function syncStrip() { const s = document.getElementById('strip'); const h = s ? s.offsetHeight : 0; document.documentElement.style.setProperty('--strip-h', h + 'px'); }
+window.addEventListener('resize', syncStrip);
+(function () {
+  const s = document.getElementById('strip');
+  document.querySelectorAll('[data-early]').forEach(e => { e.hidden = !EARLY; });
+  if (!EARLY) { s.innerHTML = '<b>冬季訓練系列現正發售</b>　套裝優惠・課堂交收・FPS／現金'; s.classList.add('static'); syncStrip(); return; }
+  const items = [
+    '<span class="hot">早鳥優惠倒數</span><b class="cd"></b>',
+    '冬季三件套早鳥優惠價 <b>HK$420</b> <span class="after">12月2號起 $480</span>',
+    '外套＋訓練長褲 <b>HK$320</b> <span class="after">12月2號起 $370</span>',
+    '長袖＋訓練長褲 <b>HK$260</b> <span class="after">12月2號起 $300</span>',
+    '跳繩及訓練器材現已上架・拍子繩設<b>成人款</b>',
+    '早鳥優惠價至 <b>12月1號（星期二）晚上 11:59</b>',
+  ];
+  const run = items.map(t => `<span class="mq-item">${t}</span>`).join('<span class="mq-dot" aria-hidden="true">●</span>');
+  s.innerHTML = `<p class="sr-only">冬季訓練系列早鳥優惠，至 12月1號晚上 11:59。</p><button type="button" class="mq-toggle" aria-pressed="false" aria-label="暫停橫額">❚❚</button><div class="mq" aria-hidden="true"><div class="mq-track"><div class="mq-run">${run}<span class="mq-dot">●</span></div><div class="mq-run">${run}<span class="mq-dot">●</span></div></div></div>`;
+  const p2 = n => String(n).padStart(2, '0');
+  function tick() {
+    const ms = EARLY_END - Date.now();
+    if (ms <= 0) { if (![...document.querySelectorAll('dialog')].some(d => d.open)) location.reload(); else s.querySelectorAll('.cd').forEach(el => { el.textContent = '早鳥優惠已完'; }); return; }
+    const d = Math.floor(ms / 86400000), h = Math.floor(ms / 3600000) % 24, m = Math.floor(ms / 60000) % 60, sec = Math.floor(ms / 1000) % 60;
+    const txt = `${d} 日 ${p2(h)}:${p2(m)}:${p2(sec)}`;
+    s.querySelectorAll('.cd').forEach(el => { el.textContent = txt; });
+  }
+  tick(); setInterval(tick, 1000);
+  const tg = s.querySelector('.mq-toggle');
+  tg.addEventListener('click', () => { const p = s.classList.toggle('paused'); tg.setAttribute('aria-pressed', p); tg.setAttribute('aria-label', p ? '播放橫額' : '暫停橫額'); tg.textContent = p ? '▶' : '❚❚'; });
+  document.querySelectorAll('[data-early]').forEach(e => { e.hidden = !EARLY; });
+})();
+syncStrip();
+
+const $ = (s, r = document) => r.querySelector(s);
+const img = n => IMAGES[n] || '';
+const priceText = p => p.price_hkd == null ? '價錢稍後公佈' : 'HK$' + p.price_hkd;
+
+document.querySelectorAll('[data-img]').forEach(el => { el.src = img(el.dataset.img); });
+
+let cart = [];
+try { cart = JSON.parse(localStorage.getItem('is-cart') || '[]'); if (!Array.isArray(cart)) cart = []; } catch (e) { cart = []; }
+cart = cart.filter(c => c && PRODUCTS.some(p => p.id === c.id && p.sizes.includes(c.size)))
+  .map(c => ({ id: c.id, size: c.size, qty: Math.min(99, Math.max(1, Math.floor(Number(c.qty)) || 1)) }));
+function saveCart() { try { localStorage.setItem('is-cart', JSON.stringify(cart)); } catch (e) {} updateCart(); }
+
+function cropStyle(c) { const R = 1.05, s = 1 / c[2]; return `width:${(1000 * s * 100).toFixed(1)}%;left:${(-c[0] * s * 100).toFixed(1)}%;top:${(-(c[1] * s) / R * 100).toFixed(1)}%`; }
+function tile(p) {
+  const b = document.createElement('button');
+  b.type = 'button'; b.className = 'tile';
+  b.setAttribute('aria-label', p.name_zh + '，查看詳情');
+  b.innerHTML = `<div class="tile-img${p.crop ? ' cropbox' : ''}">${p.badge ? `<span class="badge-new ${p.badge_cls || ''}">${p.badge}</span>` : ''}${p.img_note ? `<span class="img-note">${p.img_note}</span>` : ''}<img${p.crop ? ` style="${cropStyle(p.crop)}"` : (p.fit ? ` style="object-fit:${p.fit}"` : '')} alt="" loading="lazy" src="${img(p.images[0])}"></div>
+    <div class="tile-body"><div class="tile-name"></div><div class="tile-sum"></div>
+    <div class="tile-foot"><div class="price">${p.price_early && EARLY ? '<span class="eb">早鳥優惠價</span>' : ''}${priceText(p)}<small>／${p.unit || '件'}</small>${p.price_early && EARLY ? `<span class="after">12月2號起 HK$${p.price_regular}</span>` : ''}</div>${p.promo ? `<span class="promo">${p.promo.label}</span>` : ''}</div></div>`;
+  b.querySelector('.tile-name').textContent = p.name_zh;
+  b.querySelector('.tile-sum').textContent = p.summary;
+  b.addEventListener('click', () => openProduct(p.id));
+  return b;
+}
+PRODUCTS.filter(p => p.category === 'winter-kit').forEach(p => $('#gridKit').appendChild(tile(p)));
+PRODUCTS.filter(p => p.category === 'socks').forEach(p => $('#gridSocks').appendChild(tile(p)));
+PRODUCTS.filter(p => p.category === 'gear').forEach(p => $('#gridGear').appendChild(tile(p)));
+document.querySelectorAll('[data-goto]').forEach(b => b.addEventListener('click', () => document.getElementById(b.dataset.goto).scrollIntoView()));
+document.querySelectorAll('[data-open]').forEach(b => b.addEventListener('click', () => openProduct(b.dataset.open)));
+/* 深層連結：?p=<商品 id> 直接開啟該商品（家長 App「網店」分頁使用）；?sec=gear|socks|kit 捲至該系列 */
+(function () { try { const q = new URLSearchParams(location.search), pid = q.get('p'), sec = { gear: 'gridGear', socks: 'gridSocks', kit: 'gridKit' }[q.get('sec') || ''];
+  if (pid && PRODUCTS.some(p => p.id === pid)) setTimeout(() => openProduct(pid), 60);
+  else if (sec && document.getElementById(sec)) setTimeout(() => document.getElementById(sec).scrollIntoView(), 60); } catch (e) {} })();
+
+let cur = null, qty = 1;
+function openProduct(id) {
+  cur = PRODUCTS.find(p => p.id === id); qty = 1;
+  $('#pdHeadTitle').textContent = cur.category === 'socks' ? '運動襪' : cur.category === 'hoodie' ? '親子衛衣' : cur.category === 'gear' ? '跳繩及器材' : '冬季訓練系列';
+  $('#pdTitle').textContent = cur.name_zh;
+  $('#pdEn').textContent = cur.name_en;
+  $('#pdPrice').innerHTML = (cur.price_early && EARLY ? '<span class="eb">早鳥優惠價</span>' : '') + priceText(cur) + `<small>／${cur.unit || '件'}</small>` + (cur.price_early && EARLY ? `<span class="after">12月2號起 HK$${cur.price_regular}</span>` : '') + (cur.promo ? `<div class="pd-promo">${cur.promo.label}${cur.price_early && EARLY ? '（早鳥優惠價至 12月1號）' : ''}</div>` : '');
+  $('#pdPrice').className = cur.price_hkd != null ? 'price' : 'price tbd';
+  $('#pdDesc').textContent = cur.description;
+  let pn = $('#pdNote'); if (!pn) { pn = document.createElement('div'); pn.id = 'pdNote'; pn.className = 'pd-note'; $('#pdDesc').before(pn); }
+  pn.innerHTML = cur.pd_note || ''; pn.hidden = !cur.pd_note;
+  $('#pdSpec').innerHTML = '';
+  cur.features.forEach(t => { const li = document.createElement('li'); li.textContent = t; $('#pdSpec').appendChild(li); });
+  const views = $('#pdViews'); views.innerHTML = '';
+  cur.images.forEach((n, i) => {
+    const b = document.createElement('button'); b.type = 'button'; b.textContent = cur.image_labels[i];
+    b.setAttribute('aria-pressed', i === 0 ? 'true' : 'false');
+    b.addEventListener('click', () => { setView(i); });
+    views.appendChild(b);
+  });
+  setView(0);
+  renderMore(cur);
+  const sz = $('#pdSizes'); sz.innerHTML = '';
+  cur.sizes.forEach(s => {
+    const l = document.createElement('label');
+    l.innerHTML = `<input type="radio" name="size" value="${s}"><span>${s}</span>`;
+    sz.appendChild(l);
+  });
+  $('#sizeLegend').textContent = cur.variant_label || '尺碼';
+  $('.legend-row .linkish').hidden = !cur.size_chart;
+  if (cur.sizes.length === 1) { const only = $('#pdSizes input'); if (only) only.checked = true; }
+  $('#qVal').textContent = qty; $('#pdHint').textContent = '';
+  $('#pdDlg').showModal();
+}
+function renderMore(p) {
+  const box = $('#pdMore'); box.innerHTML = '';
+  const story = document.createElement('div'); story.className = 'story';
+  story.innerHTML = `<div><p class="eyebrow">Product Story</p><h4></h4></div><div></div>`;
+  story.querySelector('h4').textContent = '產品介紹';
+  p.story.forEach(t => { const e = document.createElement('p'); e.textContent = t; story.lastElementChild.appendChild(e); });
+  box.appendChild(story);
+  if (p.details && p.details.length) {
+    const h = document.createElement('div'); h.innerHTML = '<p class="eyebrow">Details</p><h4>細節</h4>'; box.appendChild(h);
+    const g = document.createElement('div'); g.className = 'details';
+    p.details.forEach(d => { const f = document.createElement('figure'); f.className = 'detail';
+      f.innerHTML = `<img alt="" loading="lazy" src="${img(d.img)}"><figcaption><b></b><span></span></figcaption>`;
+      f.querySelector('img').alt = p.name_zh + '：' + d.title; f.querySelector('b').textContent = d.title; f.querySelector('span').textContent = d.text; g.appendChild(f); });
+    box.appendChild(g);
+  }
+  const facts = document.createElement('div'); facts.className = 'facts';
+  const sizeTxt = p.sizes.length > 2 ? `${p.sizes[0]} 至 ${p.sizes[p.sizes.length - 1]}，共 ${p.sizes.length} 個尺碼。` : p.sizes.join('、') + '。';
+  facts.innerHTML = `<div class="fact"><b>${p.category === 'gear' ? '包括' : '物料'}</b><p></p></div><div class="fact"><b>${p.variant_label || '尺碼'}</b><p></p></div>${p.care.length ? '<div class="fact"><b>洗滌建議</b><ul></ul></div>' : ''}`;
+  const ps = facts.querySelectorAll('p'); ps[0].textContent = [p.material, p.print_method].filter(Boolean).join('・') || p.name_zh; if (p.category === 'gear') ps[1].textContent = p.sizes.join('、'); ps[1].textContent = sizeTxt;
+  p.care.forEach(t => { const li = document.createElement('li'); li.textContent = t; facts.querySelector('ul').appendChild(li); });
+  if (ps[1] && p.category !== 'gear' && false) {}
+  box.appendChild(facts);
+  $('#pdDlg').scrollTop = 0;
+}
+function setView(i) {
+  $('#pdImg').src = img(cur.images[i]);
+  $('#pdImg').alt = cur.name_zh + '（' + cur.image_labels[i] + '）';
+  [...$('#pdViews').children].forEach((b, k) => b.setAttribute('aria-pressed', k === i ? 'true' : 'false'));
+}
+$('#qMinus').addEventListener('click', () => { qty = Math.max(1, qty - 1); $('#qVal').textContent = qty; });
+$('#qPlus').addEventListener('click', () => { qty = Math.min(20, qty + 1); $('#qVal').textContent = qty; });
+$('#addBtn').addEventListener('click', () => {
+  const s = $('#pdSizes input:checked');
+  if (!s) { $('#pdHint').textContent = '請先選擇' + (cur.variant_label || '尺碼') + '。'; $('#pdSizes input')?.focus(); return; }
+  const ex = cart.find(c => c.id === cur.id && c.size === s.value);
+  if (ex) ex.qty += qty; else cart.push({ id: cur.id, size: s.value, qty });
+  saveCart();
+  $('#pdHint').textContent = `已加入購物車：${cur.name_zh}（${s.value}）× ${qty}`;
+});
+
+const BUNDLES = [{"id": "set3", "label": "冬季三件套", "items": ["winter-ls-top", "winter-jacket", "jogger-pants"], "price_hkd": 420, "price_early": 420, "price_regular": 480}, {"id": "set2", "label": "外套＋訓練長褲", "items": ["winter-jacket", "jogger-pants"], "price_hkd": 320, "price_early": 320, "price_regular": 370}, {"id": "set_tp", "label": "長袖＋訓練長褲", "items": ["winter-ls-top", "jogger-pants"], "price_hkd": 260, "price_early": 260, "price_regular": 300}];
+BUNDLES.forEach(b => { b.price_hkd = EARLY ? b.price_early : b.price_regular; });
+const bp = id => BUNDLES.find(b => b.id === id);
+PRODUCTS.filter(p => p.price_early && p.category === 'winter-kit').forEach(p => {
+  p.promo.label = p.id === 'winter-ls-top' ? `三件套 HK$${bp('set3').price_hkd}・長袖＋訓練長褲 HK$${bp('set_tp').price_hkd}`
+    : p.id === 'winter-jacket' ? `三件套 HK$${bp('set3').price_hkd}・外套＋訓練長褲 HK$${bp('set2').price_hkd}`
+    : `三件套 HK$${bp('set3').price_hkd}・配外套 HK$${bp('set2').price_hkd}・配長袖 HK$${bp('set_tp').price_hkd}`; });
+document.querySelectorAll('[data-bundle]').forEach(card => {
+  const b = bp(card.dataset.bundle);
+  const singles = b.items.reduce((a, id) => a + PRODUCTS.find(p => p.id === id).price_hkd, 0);
+  card.querySelector('.now').textContent = 'HK$' + b.price_hkd;
+  card.querySelector('.was').textContent = EARLY ? '12月2號起 HK$' + b.price_regular : '單件合計 HK$' + singles;
+  card.querySelector('.save').textContent = EARLY ? '早鳥優惠價節省 $' + (b.price_regular - b.price_early) : '節省 $' + (singles - b.price_hkd);
+});
+$('#gridKit').innerHTML = ''; PRODUCTS.filter(p => p.category === 'winter-kit').forEach(p => $('#gridKit').appendChild(tile(p)));
+document.querySelectorAll('[data-bprice]').forEach(e => { e.textContent = 'HK$' + bp(e.dataset.bprice).price_hkd; });
+const SOCK_PACKS = [[3, 99], [1, 39]];
+function sockPrice(n) {
+  // cheapest mix of 4-pair, 3-pair and single prices
+  const best = [{ total: 0, p4: 0, p3: 0, p1: 0 }];
+  for (let i = 1; i <= n; i++) {
+    let b = null;
+    SOCK_PACKS.forEach(([q, pr]) => {
+      if (q > i) return;
+      const prev = best[i - q], tot = prev.total + pr;
+      if (!b || tot < b.total) b = { total: tot, p4: prev.p4 + (q === 4), p3: prev.p3 + (q === 3), p1: prev.p1 + (q === 1) };
+    });
+    best.push(b);
+  }
+  return best[n];
+}
+function totals() {
+  const count = {}; let sockQty = 0, hoodieQty = 0, bagQty = 0, kitSingles = 0;
+  cart.forEach(c => { const p = PRODUCTS.find(x => x.id === c.id); if (!p) return;
+    if (p.category === 'socks') sockQty += c.qty; else if (p.category === 'hoodie') hoodieQty += c.qty; else if (p.id === 'gear-canvasbag') bagQty += c.qty; else count[p.id] = (count[p.id] || 0) + c.qty; });
+  const sets = [];
+  const unit = id => PRODUCTS.find(x => x.id === id).price_hkd;
+  const T = 'winter-ls-top', J = 'winter-jacket', Pn = 'jogger-pants';
+  const t0 = count[T] || 0, j0 = count[J] || 0, p0 = count[Pn] || 0;
+  const B3 = BUNDLES.find(b => b.id === 'set3'), B2 = BUNDLES.find(b => b.id === 'set2'), Bt = BUNDLES.find(b => b.id === 'set_tp');
+  let best = null;
+  for (let a = 0; a <= Math.min(t0, j0, p0); a++)
+    for (let b = 0; b <= Math.min(j0 - a, p0 - a); b++)
+      for (let c = 0; c <= Math.min(t0 - a, p0 - a - b); c++) {
+        const cost = a * B3.price_hkd + b * B2.price_hkd + c * Bt.price_hkd + (t0 - a - c) * unit(T) + (j0 - a - b) * unit(J) + (p0 - a - b - c) * unit(Pn);
+        if (!best || cost < best.cost) best = { cost, a, b, c };
+      }
+  if (best) [[B3, best.a], [B2, best.b], [Bt, best.c]].forEach(([B, n]) => {
+    if (n > 0) { sets.push({ label: B.label, n, price: B.price_hkd }); B.items.forEach(id => { count[id] -= n; }); }
+  });
+  const singles = [];
+  Object.entries(count).forEach(([id, n]) => { if (n > 0) { const p = PRODUCTS.find(x => x.id === id); singles.push({ label: p.name_zh, n, price: p.price_hkd }); } });
+  const kitQty = cart.reduce((a, c) => { const p = PRODUCTS.find(x => x.id === c.id); return a + (p && p.category === 'winter-kit' ? c.qty : 0); }, 0);
+  const kitTotal = sets.reduce((a, s) => a + s.n * s.price, 0) + singles.reduce((a, s) => a + s.n * s.price, 0);
+  const sp = sockPrice(sockQty);
+  const bundles = sp.p4 + sp.p3, sockTotal = sp.total;
+  const hp = PRODUCTS.find(x => x.category === 'hoodie');
+  const hoodieEach = hoodieQty >= hp.promo.min ? hp.promo.each : hp.price_hkd, hoodieTotal = hoodieQty * hoodieEach;
+  const bagP = PRODUCTS.find(x => x.id === 'gear-canvasbag'), bag3P = 50;
+  const bag3 = Math.floor(bagQty / 3), bagTotal = bag3 * bag3P + (bagQty % 3) * bagP.price_hkd;
+  return { sockQty, kitQty, bundles, sockTotal, sockPacks: sp, sets, singles, kitTotal, hoodieQty, hoodieEach, hoodieTotal, bagQty, bag3, bagTotal, grand: kitTotal + sockTotal + hoodieTotal + bagTotal };
+}
+function totalRows(t) {
+  const rows = [];
+  t.sets.forEach(s => rows.push(`<div><span>${s.label} × ${s.n}</span><span>HK$${s.n * s.price}</span></div>`));
+  t.singles.forEach(s => rows.push(`<div><span>${esc(s.label)} × ${s.n}</span><span>HK$${s.n * s.price}</span></div>`));
+  if (t.bagQty) rows.push(`<div><span>帆布跳繩袋 ${t.bagQty} 個${t.bag3 ? `（3 個 $50 × ${t.bag3}）` : ''}</span><span>HK$${t.bagTotal}</span></div>`);
+  if (t.hoodieQty) rows.push(`<div><span>衛衣 ${t.hoodieQty} 件（每件 HK$${t.hoodieEach}）</span><span>HK$${t.hoodieTotal}</span></div>`);
+  if (t.sockQty) { const k = t.sockPacks, parts = [];
+    if (k.p3) parts.push(`3 雙優惠 × ${k.p3}`);
+    rows.push(`<div><span>運動襪 ${t.sockQty} 雙${parts.length ? `（${parts.join('、')}）` : ''}</span><span>HK$${t.sockTotal}</span></div>`); }
+  return rows;
+}
+function updateCart() {
+  const n = cart.reduce((a, c) => a + c.qty, 0);
+  $('#cartCount').textContent = n;
+  const list = $('#cartList'); list.innerHTML = '';
+  if (!cart.length) {
+    list.innerHTML = '<li class="empty">購物車暫無貨品。請選擇款式及尺碼，再按「加入購物車」。</li>';
+    $('#totals').innerHTML = ''; $('#toCheckout').disabled = true; $('#emptyHint').hidden = false;
+    return;
+  }
+  cart.forEach((c, i) => {
+    const p = PRODUCTS.find(x => x.id === c.id); if (!p) return;
+    const li = document.createElement('li'); li.className = 'cart-item';
+    li.innerHTML = `<img alt="" loading="lazy" decoding="async" src="${img(p.images[0])}"><div><div class="nm"></div><div class="meta">${p.variant_label || '尺碼'} ${c.size}</div>
+      <div class="qty" role="group" aria-label="數量" style="margin-top:6px"><button type="button" data-d="-1" aria-label="減少">−</button><output>${c.qty}</output><button type="button" data-d="1" aria-label="增加">+</button></div></div>
+      <button type="button" class="rm">移除</button>`;
+    li.querySelector('.nm').textContent = p.name_zh;
+    li.querySelectorAll('[data-d]').forEach(b => b.addEventListener('click', () => { c.qty = Math.max(1, c.qty + Number(b.dataset.d)); saveCart(); }));
+    li.querySelector('.rm').addEventListener('click', () => { cart.splice(i, 1); saveCart(); });
+    list.appendChild(li);
+  });
+  const t = totals();
+  const rows = totalRows(t);
+  const full = cart.reduce((a, c) => { const p = PRODUCTS.find(x => x.id === c.id); return a + (p ? p.price_hkd * c.qty : 0); }, 0);
+  if (full - t.grand > 0) rows.push(`<div class="savings"><span>套裝及優惠已節省</span><span>HK$${full - t.grand}</span></div>`);
+  rows.push(`<div class="grand"><span>合計</span><span>HK$${t.grand}</span></div>`);
+  if (t.sockQty && t.sockQty < 3) rows.push(`<div style="font-size:13px;color:var(--muted)"><span>再加 ${3 - t.sockQty} 雙，3 雙只需 HK$99。</span></div>`);
+  if (t.hoodieQty === 1) rows.push(`<div style="font-size:13px;color:var(--muted)"><span>衛衣購買 2 件或以上，每件只需 HK$179。</span></div>`);
+  $('#totals').innerHTML = rows.join('');
+  $('#toCheckout').disabled = false; $('#emptyHint').hidden = true;
+}
+const VIEWS = { vCart: '購物車', vBuyer: '買家資料', vPay: '付款', vDone: '訂單已提交' };
+function showView(v) {
+  Object.keys(VIEWS).forEach(id => { $('#' + id).hidden = id !== v; });
+  $('#cartTitle').textContent = VIEWS[v];
+  const ct = $('#cartTitle'); ct.tabIndex = -1; if ($('#cartDlg').open) ct.focus();
+}
+let buyer = {};
+function summaryHTML(extra) {
+  const t = totals();
+  const items = cart.map(c => { const p = PRODUCTS.find(x => x.id === c.id); return `<div><span>${p ? p.name_zh : c.id}（${c.size}）× ${c.qty}</span></div>`; }).join('');
+  let rows = `<div><span>學生</span><span>${esc(buyer.student)}</span></div><div><span>班別 / 日子</span><span>${esc(buyer.cls)}</span></div><div><span>家長電話</span><span>${esc(buyer.phone)}</span></div><div><span>家長電郵</span><span>${esc(buyer.email)}</span></div>${buyer.note ? `<div><span>備註</span><span>${esc(buyer.note)}</span></div>` : ''}${items}<div><span>交收</span><span>課堂交收</span></div>`;
+  rows += totalRows(t).join('');
+  rows += `<div class="grand"><span>應付金額</span><span>HK$${t.grand} <button type="button" class="btn-copy" data-copy="${t.grand}">複製</button></span></div>`;
+  return rows + (extra || '');
+}
+function esc(s) { const d = document.createElement('div'); d.textContent = s || ''; return d.innerHTML; }
+function makeOrderNo() {
+  const d = new Date(); const p = n => String(n).padStart(2, '0');
+  return `IS-S${String(d.getFullYear()).slice(2)}${p(d.getMonth() + 1)}${p(d.getDate())}-${Math.random().toString(36).slice(2, 6).toUpperCase()}`;
+}
+document.addEventListener('click', e => {
+  const b = e.target.closest('[data-copy]'); if (!b) return;
+  const done = () => { const o = b.textContent; b.textContent = '已複製'; setTimeout(() => { b.textContent = o; }, 1200); };
+  try { navigator.clipboard.writeText(b.dataset.copy).then(done, done); } catch (err) { done(); }
+});
+updateCart();
+$('#cartBtn').addEventListener('click', () => { showView('vCart'); $('#cartDlg').showModal(); });
+$('#toCheckout').addEventListener('click', () => { if (!cart.length) return; $('#buyerErr').textContent = ''; showView('vBuyer'); $('#vBuyer [name=student]').focus(); });
+$('#backCart').addEventListener('click', () => showView('vCart'));
+$('#backBuyer').addEventListener('click', () => showView('vBuyer'));
+['vBuyer', 'vPay'].forEach(id => $('#' + id).addEventListener('input', e => { if (e.target.value && String(e.target.value).trim()) e.target.setAttribute('aria-invalid', 'false'); }));
+$('#vBuyer').addEventListener('submit', e => {
+  e.preventDefault();
+  const fm = e.target;
+  const checks = [['student', '請填學生中文全名'], ['cls', '請填上課班別／日子'], ['phone', '請填家長 WhatsApp 電話'], ['email', '請填寫家長電郵']];
+  for (const [n, msg] of checks) {
+    const el = fm.elements[n];
+    if (!el.value.trim()) { el.setAttribute('aria-invalid', 'true'); $('#buyerErr').textContent = msg; el.focus(); return; }
+  }
+  const ph = fm.elements.phone.value.replace(/[\s-]/g, '').replace(/^\+?852/, '');
+  if (!/^[4-9]\d{7}$/.test(ph)) { fm.elements.phone.setAttribute('aria-invalid', 'true'); $('#buyerErr').textContent = '請填 8 位數香港電話號碼'; fm.elements.phone.focus(); return; }
+  const em = fm.elements.email.value.trim();
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(em)) { fm.elements.email.setAttribute('aria-invalid', 'true'); $('#buyerErr').textContent = '請填寫有效的電郵地址'; fm.elements.email.focus(); return; }
+  buyer = { student: fm.elements.student.value.trim(), cls: fm.elements.cls.value.trim(), phone: ph, email: em, note: fm.elements.note.value.trim() };
+  $('#paySummary').innerHTML = summaryHTML();
+  $('#payErr').textContent = '';
+  const t = totals();
+  const fps = $('#vPay [value=fps]');
+  fps.disabled = t.grand === 0;
+  if (fps.disabled) $('#vPay [value=cash]').checked = true;
+  syncPay();
+  showView('vPay');
+});
+function syncPay() {
+  const cash = $('#vPay [value=cash]').checked;
+  $('#fpsBox').hidden = cash; $('#cashBox').hidden = !cash;
+}
+$('#vPay').addEventListener('change', e => {
+  if (e.target.name === 'pay') syncPay();
+  if (e.target.name === 'shot') {
+    const f = e.target.files[0]; const pv = $('#shotPreview');
+    if (f) { pv.src = URL.createObjectURL(f); pv.hidden = false; $('#payErr').textContent = ''; } else { pv.hidden = true; }
+  }
+});
+const API = 'https://script.google.com/macros/s/AKfycbx-z8a_INdsP7xB4Sgki6kAyucooYGRvNRBD3dW-E6Y2ouwIfM3LI7xiazOaYhtiz1-/exec';
+function compressImage(file) {
+  return new Promise((res, rej) => {
+    if (!file) return res('');
+    if (file.size > 15 * 1048576) return rej(new Error('圖片檔案過大，請選擇較小的圖片'));
+    const rd = new FileReader();
+    rd.onerror = () => rej(new Error('未能讀取截圖，請重新選擇'));
+    rd.onload = () => {
+      const im = new Image();
+      im.onload = () => {
+        const MAX = 1600; let w = im.width, hh = im.height;
+        if (w > MAX || hh > MAX) { if (w >= hh) { hh = Math.round(hh * MAX / w); w = MAX; } else { w = Math.round(w * MAX / hh); hh = MAX; } }
+        const cv = document.createElement('canvas'); cv.width = w; cv.height = hh; cv.getContext('2d').drawImage(im, 0, 0, w, hh);
+        res(cv.toDataURL('image/jpeg', 0.82));
+      };
+      im.onerror = () => rej(new Error('不支援此圖片格式，請使用 JPG 或 PNG'));
+      im.src = rd.result;
+    };
+    rd.readAsDataURL(file);
+  });
+}
+function itemLines() {
+  return cart.map(c => { const p = PRODUCTS.find(x => x.id === c.id); return `${p ? p.name_zh : c.id}（${c.size}）× ${c.qty}`; });
+}
+function waText(no, t, method) {
+  return ['INITIATE SPORTS 網店訂單', `訂單編號：${no}`, `學生：${buyer.student}`, `班別：${buyer.cls}`, `家長電話：${buyer.phone}`, `家長電郵：${buyer.email}`,
+    ...(buyer.note ? [`備註：${buyer.note}`] : []), '貨品：', ...itemLines().map(s => '・' + s), `金額：HK$${t.grand}`,
+    `付款：${method === 'fps' ? 'FPS（截圖隨後傳上）' : '現金（收貨時付款）'}`].join('\n');
+}
+let submitting = false, clientToken = '';
+function finishOrder(no, amount, method, viaSystem) {
+  $('#orderNo').textContent = no; $('#copyOrder').dataset.copy = no;
+  const t = totals();
+  $('#doneSummary').innerHTML = summaryHTML(`<div><span>付款方式</span><span>${method === 'fps' ? (viaSystem ? 'FPS 轉數（截圖已上載，待核實）' : 'FPS 轉數（截圖將於 WhatsApp 傳送）') : '現金（收貨時付款）'}</span></div>`)
+    .replace(/HK\$\d+ <button type="button" class="btn-copy" data-copy="\d+">複製<\/button>/, `HK$${amount}`);
+  $('#doneNote').textContent = viaSystem ? (method === 'fps' ? '我們核實付款後，將以電郵通知訂單確認。' : '我們確認訂單後，將以電郵通知；請於課堂交收時以現金付款。') + '請截圖保存訂單編號；如有查詢，請 WhatsApp 6331 7403 並提供訂單編號。'
+    : '我們於 WhatsApp 收到訂單後將回覆確認。請截圖保存訂單編號，並於同一 WhatsApp 對話傳送 FPS 付款截圖。';
+  $('#doneTitle').textContent = viaSystem ? '訂單已提交' : '請確認已於 WhatsApp 按「傳送」';
+  try { localStorage.setItem('is-last-order', JSON.stringify({ no, amount, at: Date.now() })); } catch (e) {}
+  cart = []; saveCart(); clientToken = '';
+  $('#vBuyer').reset(); $('#vPay').reset(); $('#shotPreview').hidden = true; $('#waFallback').hidden = true; $('#payErr').textContent = '';
+  showView('vDone');
+  if (!viaSystem) $('#cartTitle').textContent = '訂單資料';
+}
+$('#vPay').addEventListener('submit', async e => {
+  e.preventDefault();
+  if (submitting) return;
+  const fm = e.target; const method = fm.elements.pay.value;
+  if (method === 'fps' && !fm.elements.shot.files.length) { $('#payErr').textContent = '請上載 FPS 轉賬截圖。'; fm.elements.shot.focus(); return; }
+  if (!fm.elements.agree.checked) { $('#payErr').textContent = '請剔選確認：貨品售出後不設換碼及退貨。'; fm.elements.agree.focus(); return; }
+  const btn = fm.querySelector('[type=submit]');
+  submitting = true; btn.disabled = true; btn.textContent = '提交中…'; $('#payErr').textContent = ''; $('#waFallback').hidden = true;
+  const t = totals();
+  if (!clientToken) clientToken = 's' + Date.now() + '_' + Math.random().toString(36).slice(2, 8);
+  let payImg = '';
+  try { if (method === 'fps') payImg = await compressImage(fm.elements.shot.files[0]); }
+  catch (err) { submitting = false; btn.disabled = false; btn.textContent = '確認提交訂單'; $('#payErr').textContent = err.message; return; }
+  let r = null;
+  try {
+    const ctl = new AbortController(); const tm = setTimeout(() => ctl.abort(), 45000);
+    const resp = await fetch(API, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, signal: ctl.signal,
+      body: JSON.stringify({ action: 'shopOrder', name: buyer.student, classInfo: buyer.cls, phone: buyer.phone, email: buyer.email, note: buyer.note,
+        payment: method, items: JSON.stringify(cart.map(c => ({ sku: c.id, size: c.size, qty: c.qty }))), clientAmount: t.grand, payImg, clientToken }) });
+    clearTimeout(tm); r = await resp.json();
+  } catch (err) { r = null; }
+  submitting = false; btn.disabled = false; btn.textContent = '確認提交訂單';
+  if (r && r.ok && r.id) { finishOrder(r.id, r.amount != null ? r.amount : t.grand, method, true); return; }
+  const fb = $('#waFallback');
+  fb.innerHTML = `<span>系統暫時未能提交訂單${r && r.err ? '（' + esc(r.err) + '）' : ''}。請按下方按鈕，以 WhatsApp 傳送訂單，我們收到後將回覆確認。</span><button type="button" class="btn" id="waSend">用 WhatsApp 傳送訂單</button>`;
+  fb.hidden = false;
+  $('#waSend').addEventListener('click', () => {
+    const no = makeOrderNo();
+    window.open('https://wa.me/' + WA + '?text=' + encodeURIComponent(waText(no, t, method)), '_blank', 'noopener');
+    finishOrder(no, t.grand, method, false);
+  });
+});
+$('#doneBtn').addEventListener('click', () => { showView('vCart'); $('#cartDlg').close(); });
+$('#cartDlg').addEventListener('close', () => { if (!$('#vDone').hidden) showView('vCart'); });
+const TABS = [['tops', '長袖訓練服'], ['jacket', '外套'], ['pants', '訓練長褲'], ['socks', '襪子'], ['hoodie', '衛衣']];
+function showTab(k) {
+  [...$('#sgTabs').children].forEach(b => b.setAttribute('aria-selected', b.dataset.k === k ? 'true' : 'false'));
+  const g = SIZES[k];
+  const head = '<tr>' + g.columns.map(c => `<th scope="col">${c}</th>`).join('') + '</tr>';
+  const rows = g.rows.map(r => '<tr>' + r.map(v => `<td>${v}</td>`).join('') + '</tr>').join('');
+  $('#sgBody').innerHTML = `<p class="warn">${['tops', 'jacket', 'pants'].includes(k) ? SIZES.note + ' ' : ''}${g.note || ''}</p><p class="scroll-hint">← 表格可左右滑動 →</p><div class="table-box" tabindex="0" role="region" aria-label="${g.title}尺碼表"><table><thead>${head}</thead><tbody>${rows}</tbody></table></div>`;
+}
+TABS.forEach(([k, t]) => { const b = document.createElement('button'); b.type = 'button'; b.role = 'tab'; b.dataset.k = k; b.textContent = t; b.addEventListener('click', () => showTab(k)); $('#sgTabs').appendChild(b); });
+function openSizes(k) { showTab(k || (cur && $('#pdDlg').open ? cur.size_chart : 'tops')); $('#sgDlg').showModal(); }
+document.querySelectorAll('[data-open-sizes]').forEach(a => a.addEventListener('click', e => { e.preventDefault(); openSizes(); }));
+
+document.querySelectorAll('dialog').forEach(d => {
+  d.querySelector('[data-close]').addEventListener('click', () => d.close());
+  d.addEventListener('click', e => { if (e.target === d) d.close(); });
+});
+</script>
+<style>
+.cs-fab{position:fixed;right:20px;bottom:20px;z-index:60;display:flex;align-items:center;gap:8px;background:#fff;color:#13213D;border:1px solid #D5E4E7;border-radius:999px;padding:10px 18px 10px 12px;font:600 15px var(--body);box-shadow:0 10px 30px rgba(19,33,61,.16);cursor:pointer}
+.cs-fab .ic{width:32px;height:32px;border-radius:50%;background:#3DB8D0;color:#fff;display:grid;place-items:center}
+.cs-fab[hidden]{display:none}
+.cs{position:fixed;right:20px;bottom:20px;z-index:61;width:380px;max-width:calc(100vw - 32px);height:min(600px,calc(100vh - 110px));background:#fff;border:1px solid #D5E4E7;border-radius:20px;box-shadow:0 24px 60px rgba(19,33,61,.22);display:flex;flex-direction:column;overflow:hidden;font-family:var(--body)}
+.cs[hidden]{display:none}
+.cs-hd{display:flex;align-items:center;gap:12px;padding:16px 18px;background:linear-gradient(180deg,#E9F6F8,#fff);border-bottom:1px solid #E3EDEF}
+.cs-hd .av{width:38px;height:38px;border-radius:50%;background:#fff;border:1px solid #D5E4E7;display:grid;place-items:center;overflow:hidden}.cs-hd .av img{width:30px}
+.cs-hd b{display:block;font-size:15px;color:#0D1B2C}.cs-hd span{font-size:12.5px;color:#4A5D6E}
+.cs-x{margin-left:auto;width:34px;height:34px;border-radius:50%;border:0;background:transparent;font-size:20px;color:#4A5D6E;cursor:pointer}
+.cs-x:hover{background:#E9F2F3}
+.cs-body{flex:1;overflow:auto;padding:16px;display:flex;flex-direction:column;gap:10px;background:#F7FAFA}
+.cs-m{max-width:86%;padding:10px 14px;border-radius:16px;font-size:14.5px;line-height:1.6;white-space:pre-line}
+.cs-m.bot{background:#fff;border:1px solid #E3EDEF;color:#1B2A3A;border-top-left-radius:6px;align-self:flex-start}
+.cs-m.me{background:#13213D;color:#fff;border-top-right-radius:6px;align-self:flex-end}
+.cs-m .act{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;white-space:normal}
+.cs-m .act a,.cs-m .act button{font:600 13px var(--body);border-radius:999px;padding:6px 12px;border:1px solid #3DB8D0;color:#0B6475;background:#fff;text-decoration:none;cursor:pointer}
+.cs-m .act .wa{background:#0E7F93;border-color:#0E7F93;color:#fff}
+.cs-chips{display:flex;gap:6px;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;padding:10px 14px;border-top:1px solid #E3EDEF;background:#fff}
+.cs-chips button{flex:0 0 auto;white-space:nowrap;font:500 13px var(--body);border:1px solid #D5E4E7;background:#F4F8F8;color:#13213D;border-radius:999px;padding:6px 11px;cursor:pointer}
+.cs-chips button:hover{border-color:#3DB8D0}
+.cs-in{display:flex;gap:8px;padding:12px 14px;border-top:1px solid #E3EDEF;background:#fff}
+.cs-in input{flex:1;border:1px solid #D5E4E7;border-radius:999px;padding:10px 14px;font:15px var(--body);min-width:0}
+.cs-in input:focus{outline:2px solid #3DB8D0;border-color:transparent}
+.cs-in button{border:0;border-radius:999px;background:#13213D;color:#fff;font:600 14px var(--body);padding:0 16px;cursor:pointer}
+@media (max-width:560px){.cs{right:0;bottom:0;width:100vw;max-width:100vw;height:82vh;border-radius:20px 20px 0 0}.cs-fab{right:16px;bottom:16px}}
+</style>
+<button type="button" class="cs-fab" id="csFab" aria-label="打開網店客服"><span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg></span>網店客服</button>
+<section class="cs" id="cs" role="dialog" aria-label="網店客服" hidden>
+  <div class="cs-hd"><div class="av"><img src="img/cs-avatar.png?v=bf0d96b8" alt=""></div><div><b>INITIATE SPORTS 網店客服</b><span>常見問題即時解答</span></div><button type="button" class="cs-x" id="csX" aria-label="關閉客服">×</button></div>
+  <div class="cs-body" id="csBody" aria-live="polite"></div>
+  <div class="cs-chips" id="csChips"></div>
+  <form class="cs-in" id="csForm"><input id="csQ" placeholder="請輸入問題，例如：長袖訓練服如何選擇尺碼？" autocomplete="off" aria-label="輸入問題"><button type="submit">發送</button></form>
+</section>
+<script>
+(function () {
+  const WA_URL = 'https://wa.me/85263317403';
+  const early = typeof EARLY !== 'undefined' ? EARLY : Date.now() <= new Date('2026-12-01T23:59:59+08:00').getTime();
+  const sizes = k => ({ label: '查看尺碼表', fn: () => { close(); if (typeof openSizes === 'function') openSizes(k); } });
+  const go = id => ({ label: '前往選購', fn: () => { close(); const el = document.getElementById(id); if (el) el.scrollIntoView({ behavior: 'smooth' }); } });
+  const FAQ = [
+    { q: '長袖訓練服如何選擇尺碼？', k: ['長袖', '短袖', '上衣', 'top', '訓練服'], a: '長袖訓練服的尺碼與新款短袖訓練服相同，只是袖長不同。可直接參照小朋友現時穿着的新款短袖訓練服尺碼選擇。', act: [sizes('tops')] },
+    { q: '外套及訓練長褲如何選擇尺碼？', k: ['外套', '長褲', '褲', 'jacket', 'pants'], a: '外套及訓練長褲的尺碼表與長袖不同，同一尺碼的參考身高未必一致，請按小朋友身高逐件對照尺碼表選擇。', act: [sizes('jacket'), sizes('pants')] },
+    { q: '如何選擇尺碼？', k: ['尺碼', '碼', 'size', '大細', '揀碼', '身高', '選擇'], a: '衣服採用國際尺碼，尺寸為平鋪量度。長袖訓練服尺碼與新款短袖訓練服相同（袖長不同）；外套、訓練長褲及衛衣請參閱尺碼指南按身高選擇。如介乎兩個尺碼之間，歡迎 WhatsApp 查詢。', act: [sizes('tops')], wa: true },
+    { q: '早鳥優惠何時截止？', k: ['早鳥', '優惠', '截止', '幾時完', 'deadline', '原價'], a: early ? '冬季訓練系列早鳥優惠價至 12月1號（星期二）晚上 11:59，12月2號起恢復原價。\n長袖 $120（原價 $140）・外套 $199（原價 $230）・訓練長褲 $180（原價 $200）・三件套 $420（原價 $480）' : '冬季訓練系列早鳥優惠已經結束，現以原價發售：長袖 $140・外套 $230・訓練長褲 $200・三件套 $480。', act: [go('kit')] },
+    { q: '套裝價如何計算？', k: ['套裝', '三件', '兩件', '二件', '組合', 'bundle'], a: (early ? '早鳥優惠價：' : '') + '冬季三件套 $' + (early ? 420 : 480) + '・外套＋訓練長褲 $' + (early ? 320 : 370) + '・長袖＋訓練長褲 $' + (early ? 260 : 300) + '。\n毋須另選套裝，將單品加入購物車，系統會自動以最優惠的套裝價計算。', act: [go('sets')] },
+    { q: '有哪些付款方式？', k: ['付款', '俾錢', '畀錢', 'fps', '轉數', '現金', '入數', 'pay'], a: '可選擇 FPS 轉數（提交訂單時上載轉賬截圖），或於課堂交收時以現金付款。' },
+    { q: '訂購後如何確認訂單？', k: ['確認', '電郵', 'email', '收到', '訂單', '編號', '核實', '確認訂單'], a: '提交訂單後會即時顯示訂單編號，請截圖保存。我們核實付款（FPS）或確認訂單（現金）後，將以電郵通知訂單確認。' },
+    { q: '如何交收？需要運費嗎？', k: ['交收', '收貨', '送貨', '運費', '幾時到', '到貨', '取貨', '交貨', '如何交收'], a: '貨品到貨後，教練將於課堂上直接交予學生，毋須另付運費。到貨時我們會另行通知。' },
+    { q: '可以換碼或退貨嗎？', k: ['換', '退', '退貨', '退款', '換碼', 'refund'], a: '貨品售出後不設換碼及退貨，訂購前請先參閱尺碼指南核對尺碼。' },
+    { q: '衛衣適合甚麼天氣穿着？', k: ['衛衣', 'hoodie', '熱', '厚', '保暖', '親子', '天氣'], a: 'AIM HIGH JUMP HIGH 親子衛衣為重磅抓絨連帽款，內裏設抓絨，保暖度高，建議於氣溫 18°C 以下穿着。\n童裝 110–150、成人 S–3XL；$199，2 件或以上每件 $179。', act: [sizes('hoodie'), go('hoodie')] },
+    { q: '運動襪如何選擇尺碼？', k: ['襪', 'sock', '鞋碼'], a: '運動襪設兒童均碼（鞋碼 26–34，參考身高 100–140 cm）及成人均碼（鞋碼 35–45，參考身高 150–190 cm），請以鞋碼為主要參考。每雙 $39，任選 3 雙 $99，款式及尺碼可自由配搭。', act: [sizes('socks'), go('socks')] },
+    { q: '替換繩芯包括繩柄嗎？', k: ['繩芯', '替換', '繩柄'], a: '替換繩芯只包括繩芯，不包括繩柄，適用於已購買速度膠繩或鋼絲速度繩人士。如需整套，請選購「速度膠繩」或「鋼絲速度繩」。', act: [go('gear')] },
+    { q: '拍子繩有哪些款式？', k: ['拍子繩', '硬珠', '跳繩', '器材', '繩'], a: '專業硬珠拍子繩設兒童款及成人款，各 $100，附繩袋，提供 13 款雙色配色。另有速度膠繩、鋼絲速度繩、帆布跳繩袋（3 個 $50）及匹克球拍套裝。', act: [go('gear')] },
+    { q: '如何修改或取消訂單？', k: ['修改', '取消', '改單', '改地址', 'cancel'], a: '如需修改或取消訂單，請 WhatsApp 6331 7403 並提供訂單編號，我們會盡快處理。', wa: true },
+  ];
+  const CHIPS = [0, 3, 4, 5, 6, 7, 8, 9];
+  const fab = document.getElementById('csFab'), box = document.getElementById('cs'), body = document.getElementById('csBody');
+  let started = false;
+  function msg(text, who, extra) {
+    const d = document.createElement('div'); d.className = 'cs-m ' + who; d.textContent = text;
+    if (extra && extra.length) { const a = document.createElement('div'); a.className = 'act'; extra.forEach(x => a.appendChild(x)); d.appendChild(a); }
+    body.appendChild(d); body.scrollTop = body.scrollHeight;
+  }
+  function btn(o) { const b = document.createElement('button'); b.type = 'button'; b.textContent = o.label; b.addEventListener('click', o.fn); return b; }
+  function waBtn(q) { const a = document.createElement('a'); a.className = 'wa'; a.href = WA_URL + (q ? '?text=' + encodeURIComponent('您好，我想查詢：' + q) : ''); a.target = '_blank'; a.rel = 'noopener'; a.textContent = 'WhatsApp 6331 7403'; return a; }
+  function answer(f, q) { const ex = (f.act || []).map(btn); if (f.wa) ex.push(waBtn(q)); msg(f.a, 'bot', ex); }
+  function ask(q) {
+    q = q.trim(); if (!q) return; msg(q, 'me');
+    const t = q.toLowerCase(); let best = null, score = 0;
+    FAQ.forEach(f => { let s = 0; f.k.forEach(w => { if (t.includes(w.toLowerCase())) s += w.length; }); if (s > score) { score = s; best = f; } });
+    setTimeout(() => { if (best) answer(best, q); else msg('抱歉，這個問題暫時未能即時解答。歡迎 WhatsApp 6331 7403 聯絡我們，我們會盡快回覆。', 'bot', [waBtn(q)]); }, 250);
+  }
+  function open() {
+    box.hidden = false; fab.hidden = true;
+    if (!started) {
+      started = true;
+      msg('您好！歡迎光臨 INITIATE SPORTS 官方網店。請選擇以下常見問題，或直接輸入您的問題。', 'bot');
+      const c = document.getElementById('csChips'); CHIPS.forEach(i => c.appendChild(btn({ label: FAQ[i].q, fn: () => { msg(FAQ[i].q, 'me'); setTimeout(() => answer(FAQ[i], FAQ[i].q), 250); } })));
+    }
+    setTimeout(() => document.getElementById('csQ').focus(), 50);
+  }
+  function close() { box.hidden = true; fab.hidden = false; }
+  fab.addEventListener('click', open); document.getElementById('csX').addEventListener('click', close);
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && !box.hidden) close(); });
+  document.getElementById('csForm').addEventListener('submit', e => { e.preventDefault(); const i = document.getElementById('csQ'); ask(i.value); i.value = ''; });
+})();
+</script>
+
+<style>
+.scroll-cue{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);z-index:55;display:flex;flex-direction:column;align-items:center;gap:6px;border:0;background:transparent;cursor:pointer;color:#13213D;font:600 13px var(--body);letter-spacing:.12em;transition:opacity .35s,transform .35s}
+.scroll-cue .ring{width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,.92);border:1px solid #D5E4E7;box-shadow:0 10px 26px rgba(19,33,61,.16);display:grid;place-items:center;animation:cueBob 1.8s ease-in-out infinite}
+.scroll-cue .ring svg{width:20px;height:20px;color:#0E7F93}
+.scroll-cue span{background:rgba(255,255,255,.85);border-radius:999px;padding:3px 10px}
+.scroll-cue.hide{opacity:0;pointer-events:none;transform:translate(-50%,10px)}
+@keyframes cueBob{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
+@media (prefers-reduced-motion:reduce){.scroll-cue .ring{animation:none}}
+</style>
+<button type="button" class="scroll-cue" id="scrollCue" aria-label="向下瀏覽更多產品"><span>向下瀏覽</span><div class="ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></div></button>
+<script>
+(function(){var c=document.getElementById('scrollCue');if(!c)return;
+function upd(){var y=window.scrollY||document.documentElement.scrollTop,h=document.documentElement.scrollHeight-window.innerHeight;c.classList.toggle('hide',y>240||h-y<200||document.querySelector('dialog[open]')!==null)}
+window.addEventListener('scroll',upd,{passive:true});window.addEventListener('resize',upd);setInterval(upd,800);upd();
+c.addEventListener('click',function(){var t=document.getElementById('sets')||document.querySelector('main section:nth-of-type(2)');if(t)t.scrollIntoView({behavior:'smooth',block:'start'});else window.scrollBy({top:window.innerHeight*0.8,behavior:'smooth'})});})();
+</script>
+
+<style>
+.sizes label.so span{color:#9AA8B3;background:repeating-linear-gradient(135deg,#F3F6F7 0 6px,#E9EEF0 6px 12px);border-style:dashed;cursor:not-allowed;text-decoration:line-through}
+.sizes label.so span::after{content:'售罄';margin-left:6px;font:600 11px var(--body);color:#B0475A;text-decoration:none;display:inline-block}
+.sizes label.so span:hover{border-color:var(--line)}
+.tile.so .tile-img::after{content:'已售罄';position:absolute;inset:auto 12px 12px auto;background:#13213D;color:#fff;font:700 13px var(--body);letter-spacing:.08em;padding:6px 12px;border-radius:999px}
+.tile.so .tile-img img{filter:grayscale(.55) opacity(.75)}
+#addBtn[disabled]{opacity:.5;cursor:not-allowed}
+</style>
+<script>
+/* 售罄顯示：教練於網店教練端「售罄設定」切換，網店讀取 ?action=soldout */
+(function () {
+  var SOLD = {};
+  function isSold(id, s) { return !!SOLD[id + '|' + s]; }
+  function allSold(p) { return p.sizes.every(function (s) { return isSold(p.id, s); }); }
+  function markTiles() {
+    document.querySelectorAll('.tile').forEach(function (b) {
+      var name = (b.querySelector('.tile-name') || {}).textContent;
+      var p = PRODUCTS.find(function (x) { return x.name_zh === name; });
+      if (p) b.classList.toggle('so', allSold(p));
+    });
+  }
+  function markSizes() {
+    if (typeof cur === 'undefined' || !cur) return;
+    var any = false;
+    document.querySelectorAll('#pdSizes label').forEach(function (l) {
+      var i = l.querySelector('input'); var so = isSold(cur.id, i.value);
+      l.classList.toggle('so', so); i.disabled = so; if (so) i.checked = false; else any = true;
+    });
+    var btn = document.getElementById('addBtn');
+    btn.disabled = !any; btn.textContent = any ? '加入購物車' : '已售罄';
+  }
+  new MutationObserver(markSizes).observe(document.getElementById('pdSizes'), { childList: true });
+  fetch(API + '?action=soldout').then(function (r) { return r.json(); }).then(function (d) {
+    if (!d || !d.ok || !Array.isArray(d.soldout)) return;
+    SOLD = {}; d.soldout.forEach(function (x) { SOLD[x.id + '|' + x.size] = 1; });
+    markTiles(); markSizes();
+    var before = cart.length;
+    cart = cart.filter(function (c) { return !isSold(c.id, c.size); });
+    if (cart.length !== before) saveCart();
+  }).catch(function () {});
+})();
+</script>
+
+</body>
+</html>
