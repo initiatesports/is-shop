@@ -1,0 +1,23 @@
+name: Shop preview check
+
+# 網店預覽版（/preview/）守衛：預覽版須與正式 index.html 同步產生、noindex、攔截提交訂單、圖片延遲載入。
+# 只做靜態檢查，不連接收單後端。
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch: {}
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: 預覽版與 index.html 同步
+        run: node tools/build-shop-preview.mjs --check
+      - name: 預覽版守衛（noindex、訂單攔截、延遲載入、隱藏網址、淺色、書面語）
+        run: node tools/check-shop-preview.mjs
