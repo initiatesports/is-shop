@@ -1,6 +1,6 @@
 # INITIATE SPORTS 官方網店
 
-單一檔案網店（index.html），用 GitHub Pages 上線。訂單傳去 Google Apps Script「INITIATE 網店收單」，寫入試算表「INITIATE 網店訂單」。
+網店用 GitHub Pages 上線。2026-11-27 起原始檔（內嵌圖片）在 `tools/shop-src/index.html`；正式 `index.html`（圖片抽離、延遲載入、結帳穩定性修正 `shopfix.js`）及預覽版均由 `node tools/build-shop-preview.mjs` 產生，請只改原始檔再重新產生（CI 會檢查同步）。家長 App 商品快照：`python3 tools/build-app-shop.py <is-shop>/tools/shop-src/index.html`。訂單傳去 Google Apps Script「INITIATE 網店收單」，寫入試算表「INITIATE 網店訂單」。
 
 ## 預覽版（/preview/，隱藏網址，不公開連結）
 

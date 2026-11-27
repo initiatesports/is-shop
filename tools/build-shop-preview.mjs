@@ -19,7 +19,7 @@ import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
-const SRC = join(ROOT, 'index.html');
+const SRC = join(ROOT, 'tools', 'shop-src', 'index.html');   // 2026-11-27 起原始檔（內嵌圖片）移到 tools/shop-src/；正式 index.html 亦由本工具產生
 const OUT = join(ROOT, 'preview');
 const IMG = join(OUT, 'img');
 const CHECK = process.argv.includes('--check');
@@ -27,7 +27,7 @@ const CHECK = process.argv.includes('--check');
 const EXT = { 'image/webp': 'webp', 'image/jpeg': 'jpg', 'image/png': 'png', 'image/gif': 'gif', 'image/svg+xml': 'svg' };
 const HERO = new Set(['jacket_front.png', 'tee_front.png', 'hoodie_render.png']);
 
-export function build(html) {
+export function build(html, mode = 'preview') {
   const files = new Map();          // 檔名 → Buffer
   const byHash = new Map();         // 內容雜湊 → 相對路徑（相同圖片只存一份）
   const save = (base, mime, b64) => {
@@ -77,6 +77,13 @@ export function build(html) {
 
   /* 4) noindex＋預覽提示＋攔截提交訂單 */
   if (!out.includes('<meta name="viewport"')) throw new Error('找不到 viewport meta');
+  if (mode === 'prod') {
+    // 正式版：同樣圖片抽離及延遲載入，加入結帳穩定性修正（老闆 2026-11-27 批准），不加預覽提示及訂單攔截
+    out = out.replace('</body>', '<script src="shopfix.js"></script>\n</body>');
+    if (!out.includes('shopfix.js')) throw new Error('未能加入 shopfix.js');
+    if (out.includes('PREVIEW-GUARD')) throw new Error('正式版不可含訂單攔截');
+    return { html: out, files };
+  }
   out = out.replace(/(<meta name="viewport"[^>]*>)/, `$1\n<meta name="robots" content="noindex, nofollow, noarchive">\n<meta name="googlebot" content="noindex, nofollow">`);
   out = out.replace(/<title>([^<]*)<\/title>/, '<title>$1（預覽版）</title>');
   const guard = `<script>/* PREVIEW-GUARD：預覽版不會向收單後端提交訂單，只回覆模擬結果 */
@@ -103,25 +110,33 @@ export function build(html) {
 }
 
 const src = readFileSync(SRC, 'utf8');
-const { html, files } = build(src);
+const TARGETS = [
+  { name: 'preview', dir: OUT, ...build(src, 'preview') },
+  { name: 'prod', dir: ROOT, ...build(src, 'prod') },
+];
 
 if (CHECK) {
   const errs = [];
-  const cur = existsSync(join(OUT, 'index.html')) ? readFileSync(join(OUT, 'index.html'), 'utf8') : '';
-  if (cur !== html) errs.push('preview/index.html 與目前 index.html 不同步：請執行 node tools/build-shop-preview.mjs');
-  for (const [name, buf] of files) {
-    const p = join(IMG, name);
-    if (!existsSync(p) || !readFileSync(p).equals(buf)) errs.push(`preview/img/${name} 缺少或內容不同`);
+  for (const t of TARGETS) {
+    const img = join(t.dir, 'img'), label = t.name === 'prod' ? '' : t.name + '/';
+    const cur = existsSync(join(t.dir, 'index.html')) ? readFileSync(join(t.dir, 'index.html'), 'utf8') : '';
+    if (cur !== t.html) errs.push(`${label}index.html 與 tools/shop-src/index.html 不同步：請執行 node tools/build-shop-preview.mjs`);
+    for (const [name, buf] of t.files) {
+      const p = join(img, name);
+      if (!existsSync(p) || !readFileSync(p).equals(buf)) errs.push(`${label}img/${name} 缺少或內容不同`);
+    }
+    const extra = existsSync(img) ? readdirSync(img).filter(f => !t.files.has(f)) : [];
+    for (const f of extra) errs.push(`${label}img/${f} 已無引用，請重新產生`);
   }
-  const extra = existsSync(IMG) ? readdirSync(IMG).filter(f => !files.has(f)) : [];
-  for (const f of extra) errs.push(`preview/img/${f} 已無引用，請重新產生`);
   if (errs.length) { console.error('✗ ' + errs.join('\n✗ ')); process.exit(1); }
-  console.log(`✓ preview/ 與 index.html 同步（${files.size} 張圖片）`);
+  console.log(`✓ preview/ 及正式 index.html 與原始檔同步（${TARGETS[0].files.size} 張圖片）`);
 } else {
-  rmSync(IMG, { recursive: true, force: true });
-  mkdirSync(IMG, { recursive: true });
-  for (const [name, buf] of files) writeFileSync(join(IMG, name), buf);
-  writeFileSync(join(OUT, 'index.html'), html);
-  const total = [...files.values()].reduce((s, b) => s + b.length, 0);
-  console.log(`✓ preview/index.html ${(Buffer.byteLength(html) / 1024).toFixed(1)} KB；${files.size} 張圖片共 ${(total / 1024).toFixed(1)} KB`);
+  for (const t of TARGETS) {
+    const img = join(t.dir, 'img');
+    rmSync(img, { recursive: true, force: true });
+    mkdirSync(img, { recursive: true });
+    for (const [name, buf] of t.files) writeFileSync(join(img, name), buf);
+    writeFileSync(join(t.dir, 'index.html'), t.html);
+  }
+  console.log(`已產生 preview/ 及正式 index.html（${TARGETS[0].files.size} 張圖片）`);
 }
