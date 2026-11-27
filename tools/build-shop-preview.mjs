@@ -95,6 +95,9 @@ export function build(html) {
 </script>`;
   const banner = `<div class="pv-note" role="note" style="background:#EAF6F8;color:#0F1A28;border-bottom:1px solid #BFE3EA;font:500 13px/1.5 'Noto Sans HK',sans-serif;text-align:center;padding:8px 16px">預覽版：只供測試，提交訂單不會送出，亦不會收取款項。</div>`;
   out = out.replace(/<body([^>]*)>/, (all) => `${all}\n${guard}\n${banner}`);
+  // 結帳穩定性修正（2026-11-27）：只注入預覽版，老闆批准後才併入正式 index.html
+  out = out.replace('</body>', '<script src="../shopfix.js"></script>\n</body>');
+  if (!out.includes('shopfix.js')) throw new Error('未能加入 shopfix.js');
   if (!out.includes('PREVIEW-GUARD')) throw new Error('未能加入訂單攔截');
   return { html: out, files };
 }
